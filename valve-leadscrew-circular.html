@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Leadscrew Circular Slide Gate – Ensign Manufacturing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo"><img src="images/ENSIGN MANUFACTURING LOGO.png" alt="Ensign Manufacturing" class="header__logo-img" /></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#" class="nav__link">Product <span class="nav__arrow">&#8964;</span></a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Brochures <span class="nav__arrow">&#8964;</span></a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Services <span class="nav__arrow">&#8964;</span></a></li>
+          <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="/contact" class="btn btn--enquiry">Get enquiry</a>
+        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="vprod">
+    <div class="vprod__inner">
+
+      <div class="vprod__gallery">
+        <div class="vprod__main-img-wrap">
+          <img id="vprodMainImg" src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.jpg" alt="Leadscrew Circular Slide Gate" class="vprod__main-img" />
+        </div>
+        <div class="vprod__thumbs">
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.jpg" alt="" class="vprod__thumb active" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-02.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-03.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-04.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-05.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-06.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-07.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LCS%20Drawing%2001.JPG" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LCS%20Drawing%2002.JPG" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LCS%20Drawing%2003.JPG" alt="" class="vprod__thumb" onclick="setImg(this)" />
+        </div>
+      </div>
+
+      <div class="vprod__info">
+        <a href="fabricated-valves.html" class="vprod__back">&#8592; Back to Fabricated Valves</a>
+        <h1 class="vprod__title">Leadscrew Circular Slide</h1>
+        <div class="vprod__price-row">
+          <span class="vprod__price">£425.00</span>
+          <span class="vprod__price-vat">Excl. VAT</span>
+        </div>
+
+        <p class="vprod__label">Variants</p>
+        <div class="vprod__variants">
+          <button class="vprod__variant active" data-size="150" onclick="setVariant(this)">150</button>
+          <button class="vprod__variant" data-size="200" onclick="setVariant(this)">200</button>
+          <button class="vprod__variant" data-size="250" onclick="setVariant(this)">250</button>
+          <button class="vprod__variant" data-size="300" onclick="setVariant(this)">300</button>
+        </div>
+
+        <p class="vprod__label">Properties</p>
+        <div class="vprod__props-wrap">
+          <table class="vprod__props">
+            <thead><tr><th>A</th><th>B</th><th>C</th><th>D</th><th>E</th><th>T</th><th>W</th><th>ML</th><th>N</th></tr></thead>
+            <tbody id="vprodPropsBody">
+              <tr><td>285</td><td>150</td><td>50</td><td>3</td><td>100</td><td>452</td><td>100</td><td>310</td><td>M20</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="vprod__label">Body Material</p>
+        <div class="vprod__materials" id="bodyMat">
+          <button class="vprod__mat active" onclick="setMat('bodyMat',this)"><span>SS316</span><svg class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
+          <button class="vprod__mat" onclick="setMat('bodyMat',this)"><span>S275</span></button>
+          <button class="vprod__mat" onclick="setMat('bodyMat',this)"><span>GLV</span></button>
+        </div>
+
+        <p class="vprod__label">Slide Plate Material</p>
+        <div class="vprod__materials" id="plateMat">
+          <button class="vprod__mat active" onclick="setMat('plateMat',this)"><span>SS316</span><svg class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
+          <button class="vprod__mat" onclick="setMat('plateMat',this)"><span>S275</span></button>
+          <button class="vprod__mat" onclick="setMat('plateMat',this)"><span>GLV</span></button>
+        </div>
+
+        <div class="vprod__cart-row">
+          <button class="vprod__add-btn">Add to cart</button>
+          <a href="#" class="vprod__pdf-btn" title="Download PDF">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24" stroke="#e53e3e" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M7 21H5a2 2 0 01-2-2V5a2 2 0 012-2h10a2 2 0 012 2v3M9 21h10a2 2 0 002-2V9l-5-5H9"/><path stroke-linecap="round" stroke-linejoin="round" d="M13 3v6h6"/></svg>
+          </a>
+        </div>
+
+        <hr class="vprod__divider" />
+
+        <p class="vprod__desc-title">Description</p>
+        <ul class="vprod__desc-list">
+          <li><strong>Circular Design:</strong> Optimized for systems with round outlets and pipelines</li>
+          <li><strong>Leadscrew Mechanism:</strong> Precise manual control via a threaded leadscrew for smooth and accurate blade positioning</li>
+          <li><strong>Heavy-Duty Construction:</strong> Built to handle abrasive materials and high-pressure applications</li>
+          <li><strong>Versatile Application:</strong> Suitable for industries such as food processing, cement, agriculture, mining, plastics, and chemicals</li>
+          <li><strong>Custom Sizes Available:</strong> Can be manufactured to meet specific dimensional requirements</li>
+          <li><strong>All Units Are In Millimetres:</strong> Standardised metric measurements for international compatibility</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT SUGGESTIONS ===== -->
+  <section class="suggestions">
+    <div class="suggestions__inner">
+      <div class="suggestions__header">
+        <h2 class="suggestions__title">Related Products</h2>
+        <div class="suggestions__arrows">
+          <button class="suggestions__arrow" id="suggPrev" aria-label="Previous">&#8249;</button>
+          <button class="suggestions__arrow" id="suggNext" aria-label="Next">&#8250;</button>
+        </div>
+      </div>
+      <div class="suggestions__fade-wrap">
+        <div class="suggestions__track" id="suggTrack">
+          <a href="valve-manual-square.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="" class="scard__img"/></div><div class="scard__name">Manual Square Slide</div></a>
+          <a href="valve-manual-circular.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.jpg" alt="" class="scard__img"/></div><div class="scard__name">Manual Circular Slide</div></a>
+          <a href="valve-leadscrew-square.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.jpg" alt="" class="scard__img"/></div><div class="scard__name">Leadscrew Square Slide</div></a>
+          <a href="valve-leadscrew-circular.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.jpg" alt="" class="scard__img"/></div><div class="scard__name">Leadscrew Circular Slide</div></a>
+          <a href="valve-rack-pinion.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.jpg" alt="" class="scard__img"/></div><div class="scard__name">Rack &amp; Pinion Slide</div></a>
+          <a href="valve-type-52.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.52.jpg" alt="" class="scard__img"/></div><div class="scard__name">Fabricated Valve — Series 52</div></a>
+          <a href="valve-type-56.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.56.jpg" alt="" class="scard__img"/></div><div class="scard__name">Fabricated Valve — Series 56</div></a>
+          <a href="valve-type-59.html" class="scard"><div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.59.jpg" alt="" class="scard__img"/></div><div class="scard__name">Fabricated Valve — Series 59</div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <h3 class="footer__heading">Contact Information</h3>
+        <div class="footer__item"><span class="footer__label">Telephone:</span><a href="tel:+441513557474" class="footer__value">+44 151 355 7474</a></div>
+        <div class="footer__item"><span class="footer__label">Email:</span><a href="mailto:enquiries@ensignsiteservice.co.uk" class="footer__value">enquiries@ensignsiteservice.co.uk</a></div>
+        <div class="footer__item"><span class="footer__label">Address:</span><address class="footer__value footer__address">Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom</address></div>
+      </div>
+      <div class="footer__map">
+        <iframe title="Location" src="https://maps.google.com/maps?q=Unit+5+Blyth+Rd+Oldcotes+Worksop+S81+8JE+United+Kingdom&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
+      <p>&copy; 2025 Ensign Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const variantData = {
+      '150': ['285','150','50','3','100','452','100','310','M20'],
+      '200': ['335','200','55','3','120','552','120','390','M20'],
+      '250': ['385','250','60','3','140','652','140','470','M20'],
+      '300': ['435','300','65','3','160','752','160','550','M24']
+    };
+    function setImg(t){document.getElementById('vprodMainImg').src=t.src;document.querySelectorAll('.vprod__thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active');}
+    function setVariant(b){document.querySelectorAll('.vprod__variant').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=variantData[b.dataset.size];if(d){const c=document.querySelectorAll('#vprodPropsBody td');c.forEach((td,i)=>td.textContent=d[i]);}}
+    function setMat(g,b){const gr=document.getElementById(g);gr.querySelectorAll('.vprod__mat').forEach(x=>{x.classList.remove('active');const c=x.querySelector('.vprod__check');if(c)c.style.display='none';});b.classList.add('active');const c=b.querySelector('.vprod__check');if(c)c.style.display='block';}
+    document.querySelectorAll('.vprod__mat:not(.active) .vprod__check').forEach(el=>el.style.display='none');
+    const suggTrack = document.getElementById('suggTrack');
+    document.getElementById('suggPrev').addEventListener('click', () => suggTrack.scrollBy({ left: -480, behavior: 'smooth' }));
+    document.getElementById('suggNext').addEventListener('click', () => suggTrack.scrollBy({ left: 480, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
