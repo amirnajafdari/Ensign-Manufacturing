@@ -756,6 +756,11 @@ body {
   height: 36px;
 }
 
+.logos__item--lg {
+  width: 180px;
+  height: 72px;
+}
+
 .logos__item img {
   width: 100%;
   height: 100%;
