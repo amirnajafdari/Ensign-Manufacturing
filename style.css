@@ -521,7 +521,7 @@ body {
   width: 100%;
   max-width: 680px;
   aspect-ratio: 4/3;
-  background: #ffffff;
+  background: transparent;
 }
 
 .slide {
