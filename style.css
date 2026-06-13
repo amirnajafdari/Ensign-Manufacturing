@@ -285,7 +285,7 @@ body {
 
 .brands-section {
   background: #f8f9fb;
-  padding: 72px 32px 80px;
+  padding: 28px 32px 32px;
   border-top: 1px solid #e5e7eb;
   border-bottom: 1px solid #e5e7eb;
 }
@@ -302,70 +302,74 @@ body {
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: #9ca3af;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 
 .brands-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 10px;
 }
 
 /* ── Card ── */
 .brand-card {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: stretch;
   text-decoration: none;
   color: #111827;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 14px;
   overflow: hidden;
-  box-shadow: 0 2px 12px rgba(9,28,87,0.07), 0 1px 3px rgba(0,0,0,0.04);
-  transition: transform 0.30s cubic-bezier(0.4,0,0.2,1),
-              box-shadow 0.30s cubic-bezier(0.4,0,0.2,1);
+  box-shadow: 0 1px 6px rgba(9,28,87,0.07), 0 1px 2px rgba(0,0,0,0.04);
+  transition: transform 0.25s cubic-bezier(0.4,0,0.2,1),
+              box-shadow 0.25s cubic-bezier(0.4,0,0.2,1);
 }
 .brand-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 48px rgba(9,28,87,0.14), 0 4px 12px rgba(0,0,0,0.06);
+  transform: translateX(4px);
+  box-shadow: 0 6px 24px rgba(9,28,87,0.12), 0 2px 6px rgba(0,0,0,0.05);
 }
 
-/* ── Logo banner (full PNG as header) ── */
+/* ── Logo banner (left side) ── */
 .brand-card__banner {
-  width: 100%;
-  overflow: hidden;
+  width: 220px;
   flex-shrink: 0;
+  overflow: hidden;
 }
 
 .brand-card__logo {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  transition: transform 0.40s cubic-bezier(0.4,0,0.2,1);
+  transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
 }
-.brand-card:hover .brand-card__logo { transform: scale(1.04); }
+.brand-card:hover .brand-card__logo { transform: scale(1.05); }
 
-/* ── Content panel ── */
+/* ── Content panel (right side) ── */
 .brand-card__content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
   flex: 1;
-  padding: 28px 28px 26px;
-  border-top: 1px solid #f0f1f3;
+  padding: 0 28px;
+  gap: 28px;
+  border-left: 1px solid #f0f1f3;
+  min-height: 100px;
 }
 
 /* Tag pill */
 .brand-card__tag {
   display: inline-block;
-  align-self: flex-start;
-  font-size: 10.5px;
+  flex-shrink: 0;
+  font-size: 10px;
   font-weight: 700;
   letter-spacing: 0.10em;
   text-transform: uppercase;
   padding: 4px 12px;
   border-radius: 20px;
-  margin-bottom: 16px;
+  white-space: nowrap;
 }
 .brand-card__tag--blue  { background: #e8f0fe; color: #3a6adf; }
 .brand-card__tag--navy  { background: #e8ecf8; color: #091c57; }
@@ -373,22 +377,24 @@ body {
 
 /* Description */
 .brand-card__desc {
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 13px;
+  line-height: 1.55;
   color: #6b7280;
   flex: 1;
-  margin-bottom: 24px;
+  margin: 0;
 }
 
-/* CTA row */
+/* CTA */
 .brand-card__cta {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
+  flex-shrink: 0;
+  font-size: 12.5px;
   font-weight: 700;
   letter-spacing: 0.02em;
   color: #091c57;
+  white-space: nowrap;
   transition: gap 0.22s cubic-bezier(0.4,0,0.2,1);
 }
 .brand-card:hover .brand-card__cta { gap: 12px; }
@@ -399,14 +405,15 @@ body {
 }
 .brand-card:hover .brand-card__cta svg { transform: translateX(4px); }
 
-/* accent bottom border per brand */
-.brand-card--manufacturing { border-bottom: 4px solid #3a6adf; }
-.brand-card--site          { border-bottom: 4px solid #091c57; }
-.brand-card--design        { border-bottom: 4px solid #f5c800; }
+/* accent left border per brand */
+.brand-card--manufacturing { border-left: 4px solid #3a6adf; }
+.brand-card--site          { border-left: 4px solid #091c57; }
+.brand-card--design        { border-left: 4px solid #f5c800; }
 
-@media (max-width: 900px) {
-  .brands-grid { grid-template-columns: 1fr; gap: 20px; }
-  .brand-card__logo { height: 160px; }
+@media (max-width: 700px) {
+  .brand-card { flex-direction: column; }
+  .brand-card__banner { width: 100%; height: 120px; }
+  .brand-card__content { flex-direction: column; align-items: flex-start; padding: 16px; gap: 10px; min-height: 0; }
 }
 
 /* ======================================
