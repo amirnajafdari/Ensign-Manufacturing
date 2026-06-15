@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spillage Decking – Ensign Manufacturing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logos/ENSIGN MANUFACTURING ICON.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo"><img src="images/ENSIGN MANUFACTURING LOGO.png" alt="Ensign Manufacturing" class="header__logo-img" /></a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Product <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="inspection-doors.html" class="nav__drop-link">Inspection Door</a></li>
+              <li><a href="fabricated-valves.html" class="nav__drop-link">Fabricated Valves</a></li>
+              <li><a href="spill-pallets.html" class="nav__drop-link">Spill Pallet</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Brochures <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="PDF/ENSIGN-VALVES-A.pdf" class="nav__drop-link" target="_blank">Valves Brochure</a></li>
+              <li><a href="PDF/ENSIGN-INSPECTION%20DOOR-A.pdf" class="nav__drop-link" target="_blank">Inspection Door Brochure</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:enquiries@ensignsiteservice.co.uk" class="btn btn--enquiry">Get enquiry</a>
+        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <section class="vprod">
+    <div class="vprod__inner">
+
+      <div class="vprod__gallery">
+        <div class="vprod__main-img-wrap">
+          <img id="vprodMainImg" src="images/spill-pallets/valve.61.jpg" alt="Spillage Decking" class="vprod__main-img" />
+        </div>
+        <div class="vprod__thumbs">
+          <img src="images/spill-pallets/valve.61.jpg" alt="" class="vprod__thumb active" onclick="setImg(this)" />
+          <img src="images/spill-pallets/valve.62.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/spill-pallets/valve.63.jpg" alt="" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/spillage decking drawing.png" alt="" class="vprod__thumb" onclick="setImg(this)" />
+        </div>
+      </div>
+
+      <div class="vprod__info">
+        <a href="spill-pallets.html" class="vprod__back">&#8592; Back to Spill Pallets</a>
+        <h1 class="vprod__title">Spillage Decking</h1>
+        <div class="vprod__price-row">
+          <span class="vprod__price">POA</span>
+          <span class="vprod__price-vat">Price on application</span>
+        </div>
+
+        <p class="vprod__label">Body Material</p>
+        <div class="vprod__materials" id="bodyMat">
+          <button class="vprod__mat active" onclick="setMat('bodyMat',this)"><span>SS316</span><svg class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
+          <button class="vprod__mat" onclick="setMat('bodyMat',this)"><span>S275</span></button>
+          <button class="vprod__mat" onclick="setMat('bodyMat',this)"><span>GLV</span></button>
+        </div>
+
+        <div class="vprod__cart-row">
+          <button class="vprod__add-btn" onclick="window.location='mailto:enquiries@ensignsiteservice.co.uk?subject=Quote Request – Spillage Decking'">Request a Quote</button>
+        </div>
+
+        <hr class="vprod__divider" />
+
+        <p class="vprod__desc-title">Description</p>
+        <ul class="vprod__desc-list">
+          <li><strong>Spill Containment:</strong> Engineered to capture and contain fluid spillages, preventing environmental contamination</li>
+          <li><strong>Heavy-Duty Construction:</strong> Built from industrial-grade materials to withstand demanding workshop and plant environments</li>
+          <li><strong>Modular Design:</strong> Available in configurable sections to suit any floor area or work bay layout</li>
+          <li><strong>Non-Slip Surface:</strong> Textured decking surface provides safe underfoot conditions even when wet</li>
+          <li><strong>Regulatory Compliance:</strong> Supports compliance with environmental protection and workplace safety regulations</li>
+          <li><strong>Custom Sizes Available:</strong> Can be manufactured to meet specific dimensional requirements on request</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="suggestions">
+    <div class="suggestions__inner">
+      <div class="suggestions__header">
+        <h2 class="suggestions__title">Related Products</h2>
+        <div class="suggestions__arrows">
+          <button class="suggestions__arrow" id="suggPrev" aria-label="Previous">&#8249;</button>
+          <button class="suggestions__arrow" id="suggNext" aria-label="Next">&#8250;</button>
+        </div>
+      </div>
+      <div class="suggestions__fade-wrap">
+        <div class="suggestions__track" id="suggTrack">
+          <a href="spill-pallet-932.html" class="scard"><div class="scard__img-wrap"><img src="images/spill-pallets/932/1.jpg" alt="" class="scard__img"/></div><div class="scard__name">Spill Pallet 932</div></a>
+          <a href="spill-pallet-1245.html" class="scard"><div class="scard__img-wrap"><img src="images/spill-pallets/1245/1.jpg" alt="" class="scard__img"/></div><div class="scard__name">Spill Pallet 1245</div></a>
+          <a href="spill-pallet-1252.html" class="scard"><div class="scard__img-wrap"><img src="images/spill-pallets/1252/1.jpg" alt="" class="scard__img"/></div><div class="scard__name">Spill Pallet 1252</div></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <h3 class="footer__heading">Contact Information</h3>
+        <div class="footer__item"><span class="footer__label">Telephone:</span><a href="tel:+441513557474" class="footer__value">+44 151 355 7474</a></div>
+        <div class="footer__item"><span class="footer__label">Email:</span><a href="mailto:enquiries@ensignsiteservice.co.uk" class="footer__value">enquiries@ensignsiteservice.co.uk</a></div>
+        <div class="footer__item"><span class="footer__label">Address:</span><address class="footer__value footer__address">Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom</address></div>
+      </div>
+      <div class="footer__map">
+        <iframe title="Location" src="https://maps.google.com/maps?q=Unit+5+Blyth+Rd+Oldcotes+Worksop+S81+8JE+United+Kingdom&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer__brands">
+      <span class="footer__brands-label">Our Family of Brands</span>
+      <div class="footer__brand-logos">
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN MANUFACTURING.png" alt="Ensign Manufacturing" />
+          <span class="footer__brand-def">Industrial Components</span>
+        </a>
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN SITE SERVICE.png" alt="Ensign Site Service" />
+          <span class="footer__brand-def">On-Site Solutions</span>
+        </a>
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN DESIGN STUDIO.png" alt="Ensign Design Studio" />
+          <span class="footer__brand-def">Creative &amp; Design</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
+      <p>&copy; 2025 Ensign Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function setImg(t){document.getElementById('vprodMainImg').src=t.src;document.querySelectorAll('.vprod__thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active');}
+    function setMat(g,b){const gr=document.getElementById(g);gr.querySelectorAll('.vprod__mat').forEach(x=>{x.classList.remove('active');const c=x.querySelector('.vprod__check');if(c)c.style.display='none';});b.classList.add('active');const c=b.querySelector('.vprod__check');if(c)c.style.display='block';}
+    document.querySelectorAll('.vprod__mat:not(.active) .vprod__check').forEach(el=>el.style.display='none');
+    const suggTrack = document.getElementById('suggTrack');
+    document.getElementById('suggPrev').addEventListener('click', () => suggTrack.scrollBy({ left: -480, behavior: 'smooth' }));
+    document.getElementById('suggNext').addEventListener('click', () => suggTrack.scrollBy({ left: 480, behavior: 'smooth' }));
+  </script>
+</body>
+</html>
