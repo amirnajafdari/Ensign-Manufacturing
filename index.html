@@ -354,13 +354,11 @@
     }
     setInterval(() => showHeroSlide(heroCurrent + 1), 3500);
 
-    // ── Product Showcase (peek carousel) ──
-    const scTrack   = document.getElementById('showcaseTrack');
-    const scDots    = document.querySelectorAll('.showcase__dot');
-    const scSlides  = scTrack.querySelectorAll('.showcase__slide');
-    let scCurrent   = 0;
-    let scTimer;
-    const SC_GAP    = 20; // must match CSS gap on .showcase__track
+    // ── Product Showcase – infinite peek carousel ──
+    const scTrack = document.getElementById('showcaseTrack');
+    const scDots  = document.querySelectorAll('.showcase__dot');
+    const SC_GAP  = 20; // must match CSS gap on .showcase__track
+    const CLONE   = 3;  // ghost slides prepended + appended on each side
 
     const scProducts = [
       { name: 'Leadscrew Circular Slide Gate', desc: 'Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.',              href: 'valve-leadscrew-circular.html',    cta: 'View product →' },
@@ -376,26 +374,49 @@
       { name: 'Double Bar Door',               desc: 'Double-bar inspection door for enhanced sealing and secure access in the most demanding environments.', href: 'inspection-door-double-bar.html',  cta: 'View product →' },
     ];
 
-    function goToSlide(n) {
-      scCurrent = (n + scSlides.length) % scSlides.length;
+    // Capture the real slides before we add clones
+    const origSlides = Array.from(scTrack.querySelectorAll('.showcase__slide'));
+    const N = origSlides.length; // 11
 
-      // Centre the active slide inside the viewport
-      const slideW = scSlides[0].offsetWidth;
-      const vpW    = scTrack.parentElement.offsetWidth;
-      const offset = vpW / 2 - scCurrent * (slideW + SC_GAP) - slideW / 2;
-      scTrack.style.transform = `translateX(${offset}px)`;
+    // Prepend clones of the last CLONE real slides
+    for (let i = N - CLONE; i < N; i++) {
+      scTrack.insertBefore(origSlides[i].cloneNode(true), scTrack.firstChild);
+    }
+    // Append clones of the first CLONE real slides
+    for (let i = 0; i < CLONE; i++) {
+      scTrack.appendChild(origSlides[i].cloneNode(true));
+    }
 
-      // Opacity + scale by distance from centre
-      scSlides.forEach((s, i) => {
-        const d = Math.abs(i - scCurrent);
+    const allSlides = Array.from(scTrack.querySelectorAll('.showcase__slide'));
+    let pos = CLONE; // index into allSlides; CLONE = index of first real slide
+    let scTimer;
+
+    function goTo(n, instant) {
+      pos = n;
+      const sw  = allSlides[0].offsetWidth;
+      const vpW = scTrack.parentElement.offsetWidth;
+      const off = vpW / 2 - pos * (sw + SC_GAP) - sw / 2;
+
+      if (instant) {
+        scTrack.style.transition = 'none';
+        scTrack.style.transform  = `translateX(${off}px)`;
+        scTrack.offsetHeight;        // force layout flush so jump has no animation
+        scTrack.style.transition = '';
+      } else {
+        scTrack.style.transform = `translateX(${off}px)`;
+      }
+
+      // Opacity + scale fade by distance from centre
+      allSlides.forEach((s, i) => {
+        const d = Math.abs(i - pos);
         s.style.opacity   = d === 0 ? '1' : d === 1 ? '0.5' : '0.15';
         s.style.transform = d === 0 ? 'scale(1.06)' : 'scale(1)';
       });
 
-      scDots.forEach((d, i) => d.classList.toggle('active', i === scCurrent));
-
-      // Swap caption text
-      const p = scProducts[scCurrent];
+      // Dots + caption map to the real slide index
+      const realIdx = ((pos - CLONE) % N + N) % N;
+      scDots.forEach((d, i) => d.classList.toggle('active', i === realIdx));
+      const p = scProducts[realIdx];
       document.getElementById('showcaseName').textContent = p.name;
       document.getElementById('showcaseDesc').textContent = p.desc;
       const ctaEl = document.getElementById('showcaseCta');
@@ -403,15 +424,22 @@
       ctaEl.href = p.href;
     }
 
+    // After each animated slide, silently jump from clone to its real twin
+    scTrack.addEventListener('transitionend', e => {
+      if (e.target !== scTrack || e.propertyName !== 'transform') return;
+      if (pos < CLONE)          goTo(pos + N, true);
+      else if (pos >= CLONE + N) goTo(pos - N, true);
+    });
+
     function startTimer() {
       clearInterval(scTimer);
-      scTimer = setInterval(() => goToSlide(scCurrent + 1), 5000);
+      scTimer = setInterval(() => goTo(pos + 1), 5000);
     }
 
-    document.getElementById('showcasePrev').addEventListener('click', () => { goToSlide(scCurrent - 1); startTimer(); });
-    document.getElementById('showcaseNext').addEventListener('click', () => { goToSlide(scCurrent + 1); startTimer(); });
-    scDots.forEach((d, i) => d.addEventListener('click', () => { goToSlide(i); startTimer(); }));
-    goToSlide(0);   // initialise positions and opacities
+    document.getElementById('showcasePrev').addEventListener('click', () => { goTo(pos - 1); startTimer(); });
+    document.getElementById('showcaseNext').addEventListener('click', () => { goTo(pos + 1); startTimer(); });
+    scDots.forEach((d, i) => d.addEventListener('click', () => { goTo(CLONE + i); startTimer(); }));
+    goTo(CLONE, true); // initialise at first real slide
     startTimer();
   </script>
 </body>
