@@ -220,61 +220,110 @@
     </div>
   </section>
 
-  <!-- ===== PRODUCT SUGGESTIONS ===== -->
-  <section class="suggestions">
-    <div class="suggestions__inner">
-      <div class="suggestions__header">
-        <h2 class="suggestions__title">Products</h2>
-        <div class="suggestions__arrows">
-          <button class="suggestions__arrow" id="suggPrev" aria-label="Previous">&#8249;</button>
-          <button class="suggestions__arrow" id="suggNext" aria-label="Next">&#8250;</button>
+  <!-- ===== PRODUCT SHOWCASE ===== -->
+  <section class="showcase">
+    <div class="showcase__header">
+      <p class="showcase__eyebrow">Our Products</p>
+      <h2 class="showcase__title">Engineered for Industry</h2>
+    </div>
+
+    <div class="showcase__stage">
+      <button class="showcase__nav showcase__nav--prev" id="showcasePrev" aria-label="Previous">&#8249;</button>
+
+      <div class="showcase__viewport">
+        <div class="showcase__track" id="showcaseTrack">
+
+          <div class="showcase__slide">
+            <a href="inspection-doors.html" class="showcase__img-link">
+              <img src="images/inspection door hero.png" alt="Inspection Door" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Inspection Door</h3>
+              <p class="showcase__desc">Heavy-duty access doors in SS316, S275 &amp; GLV — available in 300 to 700mm sizes.</p>
+              <a href="inspection-doors.html" class="showcase__cta">View range &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="fabricated-valves.html" class="showcase__img-link">
+              <img src="images/valves hero section.png" alt="Fabricated Valves" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Fabricated Valves</h3>
+              <p class="showcase__desc">Slide gates, diverter valves and dampers precision-engineered for demanding flow control.</p>
+              <a href="fabricated-valves.html" class="showcase__cta">View range &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="spill-pallets.html" class="showcase__img-link">
+              <img src="images/spill pallet hero.png" alt="Spill Pallets" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Spill Pallets</h3>
+              <p class="showcase__desc">2 &amp; 4-drum containment pallets with up to 520L sump capacity for full regulatory compliance.</p>
+              <a href="spill-pallets.html" class="showcase__cta">View range &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="fabricated-valves.html" class="showcase__img-link">
+              <img src="images/diverter valve hero.png" alt="Diverter Valve" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Diverter Valve</h3>
+              <p class="showcase__desc">Custom-built diverter valves for bulk material handling and pneumatic conveying systems.</p>
+              <a href="fabricated-valves.html" class="showcase__cta">View range &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="valve-manual-square.html" class="showcase__img-link">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Manual Square Slide</h3>
+              <p class="showcase__desc">Robust manually operated square slide gate for dust, powder and granular material control.</p>
+              <a href="valve-manual-square.html" class="showcase__cta">View product &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="valve-leadscrew-circular.html" class="showcase__img-link">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.jpg" alt="Leadscrew Circular Slide" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Leadscrew Circular Slide</h3>
+              <p class="showcase__desc">Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.</p>
+              <a href="valve-leadscrew-circular.html" class="showcase__cta">View product &rarr;</a>
+            </div>
+          </div>
+
+          <div class="showcase__slide">
+            <a href="valve-rack-pinion.html" class="showcase__img-link">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.jpg" alt="Rack & Pinion Slide" class="showcase__img" />
+            </a>
+            <div class="showcase__info">
+              <h3 class="showcase__name">Rack &amp; Pinion Slide</h3>
+              <p class="showcase__desc">High-torque rack and pinion operated slide gate designed for heavy-duty industrial applications.</p>
+              <a href="valve-rack-pinion.html" class="showcase__cta">View product &rarr;</a>
+            </div>
+          </div>
+
         </div>
       </div>
-      <div class="suggestions__fade-wrap">
-        <div class="suggestions__track" id="suggTrack">
 
-          <a href="valve-manual-square.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide" class="scard__img" /></div>
-            <div class="scard__name">Manual Square Slide</div>
-          </a>
+      <button class="showcase__nav showcase__nav--next" id="showcaseNext" aria-label="Next">&#8250;</button>
+    </div>
 
-          <a href="valve-manual-circular.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.jpg" alt="Manual Circular Slide" class="scard__img" /></div>
-            <div class="scard__name">Manual Circular Slide</div>
-          </a>
-
-          <a href="valve-leadscrew-square.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.jpg" alt="Leadscrew Square Slide" class="scard__img" /></div>
-            <div class="scard__name">Leadscrew Square Slide</div>
-          </a>
-
-          <a href="valve-leadscrew-circular.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-04.jpg" alt="Leadscrew Circular Slide" class="scard__img" /></div>
-            <div class="scard__name">Leadscrew Circular Slide</div>
-          </a>
-
-          <a href="valve-rack-pinion.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.jpg" alt="Rack & Pinion Slide" class="scard__img" /></div>
-            <div class="scard__name">Rack &amp; Pinion Slide</div>
-          </a>
-
-          <a href="valve-type-52.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.52.jpg" alt="Series 52" class="scard__img" /></div>
-            <div class="scard__name">Fabricated Valve — Series 52</div>
-          </a>
-
-          <a href="valve-type-56.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.56.jpg" alt="Series 56" class="scard__img" /></div>
-            <div class="scard__name">Fabricated Valve — Series 56</div>
-          </a>
-
-          <a href="valve-type-59.html" class="scard">
-            <div class="scard__img-wrap"><img src="images/VALVE%20ALBUM/New%20folder/untitled.59.jpg" alt="Series 59" class="scard__img" /></div>
-            <div class="scard__name">Fabricated Valve — Series 59</div>
-          </a>
-
-        </div>
-      </div>
+    <div class="showcase__dots" id="showcaseDots">
+      <span class="showcase__dot active"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
     </div>
   </section>
 
@@ -349,30 +398,42 @@
   </footer>
 
   <script>
-    // Product suggestions scroll
-    const track    = document.getElementById('suggTrack');
-    const cardWidth = 240;
-    document.getElementById('suggPrev').addEventListener('click', () => {
-      track.scrollBy({ left: -cardWidth * 2, behavior: 'smooth' });
-    });
-    document.getElementById('suggNext').addEventListener('click', () => {
-      track.scrollBy({ left: cardWidth * 2, behavior: 'smooth' });
-    });
+    // ── Hero slideshow ──
+    const heroSlides = document.querySelectorAll('.slide');
+    const heroDots   = document.querySelectorAll('.dot');
+    let heroCurrent  = 0;
 
-    // Hero slideshow
-    const slides = document.querySelectorAll('.slide');
-    const dots   = document.querySelectorAll('.dot');
-    let current  = 0;
+    function showHeroSlide(n) {
+      heroSlides[heroCurrent].classList.remove('active');
+      heroDots[heroCurrent].classList.remove('active');
+      heroCurrent = (n + heroSlides.length) % heroSlides.length;
+      heroSlides[heroCurrent].classList.add('active');
+      heroDots[heroCurrent].classList.add('active');
+    }
+    setInterval(() => showHeroSlide(heroCurrent + 1), 3500);
 
-    function showSlide(n) {
-      slides[current].classList.remove('active');
-      dots[current].classList.remove('active');
-      current = (n + slides.length) % slides.length;
-      slides[current].classList.add('active');
-      dots[current].classList.add('active');
+    // ── Product Showcase ──
+    const scTrack  = document.getElementById('showcaseTrack');
+    const scDots   = document.querySelectorAll('.showcase__dot');
+    const scSlides = scTrack.querySelectorAll('.showcase__slide');
+    let scCurrent  = 0;
+    let scTimer;
+
+    function goToSlide(n) {
+      scCurrent = (n + scSlides.length) % scSlides.length;
+      scTrack.style.transform = `translateX(-${scCurrent * 100}%)`;
+      scDots.forEach((d, i) => d.classList.toggle('active', i === scCurrent));
     }
 
-    setInterval(() => showSlide(current + 1), 2000);
+    function startTimer() {
+      clearInterval(scTimer);
+      scTimer = setInterval(() => goToSlide(scCurrent + 1), 5000);
+    }
+
+    document.getElementById('showcasePrev').addEventListener('click', () => { goToSlide(scCurrent - 1); startTimer(); });
+    document.getElementById('showcaseNext').addEventListener('click', () => { goToSlide(scCurrent + 1); startTimer(); });
+    scDots.forEach((d, i) => d.addEventListener('click', () => { goToSlide(i); startTimer(); }));
+    startTimer();
   </script>
 </body>
 </html>
