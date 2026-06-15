@@ -231,10 +231,17 @@
       <button class="showcase__nav showcase__nav--prev" id="showcasePrev" aria-label="Previous">&#8249;</button>
       <div class="showcase__viewport">
         <div class="showcase__track" id="showcaseTrack">
-          <div class="showcase__slide"><img src="images/diverter valve hero.png"     alt="Diverter Valve"         class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.png" alt="Manual Square Slide" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.png" alt="Leadscrew Circular Slide" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.png" alt="Rack &amp; Pinion Slide" class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.png" alt="Leadscrew Circular Slide Gate" class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.png"   alt="Leadscrew Square Slide Gate"   class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.png"     alt="Manual Circular Slide Gate"    class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.png"         alt="Manual Square Slide Gate"      class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.png"         alt="Rack &amp; Pinion Slide Gate"  class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.52.png"  alt="Fabricated Valve Series 52" class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.56.png"  alt="Fabricated Valve Series 56" class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.59.png"  alt="Fabricated Valve Series 59" class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/inspection-doors/standard-door/1.png"    alt="Standard Door"    class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/inspection-doors/single-bar-door/1.png"  alt="Single Bar Door"  class="showcase__img" /></div>
+          <div class="showcase__slide"><img src="images/inspection-doors/double-bar-door/1.png"  alt="Double Bar Door"  class="showcase__img" /></div>
         </div>
       </div>
       <button class="showcase__nav showcase__nav--next" id="showcaseNext" aria-label="Next">&#8250;</button>
@@ -242,13 +249,20 @@
 
     <!-- Caption updates via JS -->
     <div class="showcase__caption">
-      <h3 class="showcase__name" id="showcaseName">Diverter Valve</h3>
-      <p class="showcase__desc" id="showcaseDesc">Custom-built diverter valves for bulk material handling and pneumatic conveying systems.</p>
-      <a href="fabricated-valves.html" class="showcase__cta" id="showcaseCta">View range &rarr;</a>
+      <h3 class="showcase__name" id="showcaseName">Leadscrew Circular Slide Gate</h3>
+      <p class="showcase__desc" id="showcaseDesc">Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.</p>
+      <a href="valve-leadscrew-circular.html" class="showcase__cta" id="showcaseCta">View product &rarr;</a>
     </div>
 
     <div class="showcase__dots" id="showcaseDots">
       <span class="showcase__dot active"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
+      <span class="showcase__dot"></span>
       <span class="showcase__dot"></span>
       <span class="showcase__dot"></span>
       <span class="showcase__dot"></span>
@@ -349,10 +363,17 @@
     const SC_GAP    = 20; // must match CSS gap on .showcase__track
 
     const scProducts = [
-      { name: 'Diverter Valve',      desc: 'Custom-built diverter valves for bulk material handling and pneumatic conveying systems.',               href: 'fabricated-valves.html',       cta: 'View range →' },
-      { name: 'Manual Square Slide', desc: 'Robust manually operated square slide gate for dust, powder and granular material control.',             href: 'valve-manual-square.html',     cta: 'View product →' },
-      { name: 'Leadscrew Circular',  desc: 'Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.',              href: 'valve-leadscrew-circular.html',cta: 'View product →' },
-      { name: 'Rack & Pinion Slide', desc: 'High-torque rack and pinion operated slide gate designed for heavy-duty industrial applications.',       href: 'valve-rack-pinion.html',       cta: 'View product →' },
+      { name: 'Leadscrew Circular Slide Gate', desc: 'Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.',              href: 'valve-leadscrew-circular.html',    cta: 'View product →' },
+      { name: 'Leadscrew Square Slide Gate',   desc: 'Heavy-duty leadscrew-operated square slide gate for reliable bulk material flow control.',              href: 'valve-leadscrew-square.html',      cta: 'View product →' },
+      { name: 'Manual Circular Slide Gate',    desc: 'Manually operated circular slide gate built for industrial-grade dust and powder control.',             href: 'valve-manual-circular.html',       cta: 'View product →' },
+      { name: 'Manual Square Slide Gate',      desc: 'Robust manually operated square slide gate for dust, powder and granular material control.',            href: 'valve-manual-square.html',         cta: 'View product →' },
+      { name: 'Rack & Pinion Slide Gate',      desc: 'High-torque rack and pinion operated slide gate designed for heavy-duty industrial applications.',      href: 'valve-rack-pinion.html',           cta: 'View product →' },
+      { name: 'Fabricated Valve — Series 52',  desc: 'Series 52 diverter valve engineered for precise material flow switching in pneumatic conveying.',       href: 'valve-type-52.html',               cta: 'View product →' },
+      { name: 'Fabricated Valve — Series 56',  desc: 'Series 56 diverter valve delivering reliable two-way material diversion under high-cycle demands.',    href: 'valve-type-56.html',               cta: 'View product →' },
+      { name: 'Fabricated Valve — Series 59',  desc: 'Series 59 diverter valve designed for gravity-fed and pneumatic bulk material handling systems.',      href: 'valve-type-59.html',               cta: 'View product →' },
+      { name: 'Standard Door',                 desc: 'Heavy-duty standard inspection door in SS316, S275 & GLV — built for safe, reliable plant access.',    href: 'inspection-door-standard.html',    cta: 'View product →' },
+      { name: 'Single Bar Door',               desc: 'Single-bar inspection door providing secure access with quick-release locking for industrial use.',     href: 'inspection-door-single-bar.html',  cta: 'View product →' },
+      { name: 'Double Bar Door',               desc: 'Double-bar inspection door for enhanced sealing and secure access in the most demanding environments.', href: 'inspection-door-double-bar.html',  cta: 'View product →' },
     ];
 
     function goToSlide(n) {
