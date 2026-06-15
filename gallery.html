@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Gallery – Ensign Manufacturing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logos/ENSIGN MANUFACTURING ICON.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .gallery-filters {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    .gallery-filter-btn {
+      padding: 8px 22px;
+      border-radius: 999px;
+      border: 1.5px solid #d1d5db;
+      background: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      color: #374151;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-family: 'Inter', sans-serif;
+    }
+    .gallery-filter-btn:hover,
+    .gallery-filter-btn.active {
+      background: #2563eb;
+      border-color: #2563eb;
+      color: #fff;
+    }
+    .gallery-category {
+      margin-bottom: 52px;
+    }
+    .gallery-category__label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #9ca3af;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .gallery-category[data-hidden] { display: none; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo">
+          <img src="images/ENSIGN MANUFACTURING LOGO.png" alt="Ensign Manufacturing" class="header__logo-img" />
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Product <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="inspection-doors.html" class="nav__drop-link">Inspection Door</a></li>
+              <li><a href="fabricated-valves.html" class="nav__drop-link">Fabricated Valves</a></li>
+              <li><a href="spill-pallets.html" class="nav__drop-link">Spill Pallet</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Brochures <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="PDF/ENSIGN-VALVES-A.pdf" class="nav__drop-link" target="_blank">Valves Brochure</a></li>
+              <li><a href="PDF/ENSIGN-INSPECTION%20DOOR-A.pdf" class="nav__drop-link" target="_blank">Inspection Door Brochure</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--active">
+            <a href="gallery.html" class="nav__link">Gallery</a>
+          </li>
+          <li class="nav__item">
+            <a href="contact.html" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="contact.html" class="btn btn--enquiry">Get enquiry</a>
+        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="cat-hero">
+    <div class="cat-hero__inner">
+      <a href="index.html" class="product-page__back">&#8592; Back to Home</a>
+      <h1 class="cat-hero__title">Product Gallery</h1>
+      <p class="cat-hero__sub">Browse our full range of precision-engineered industrial components.</p>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="cat-grid-section">
+    <div class="cat-grid-section__inner">
+
+      <!-- Filter buttons -->
+      <div class="gallery-filters">
+        <button class="gallery-filter-btn active" data-filter="all">All Products</button>
+        <button class="gallery-filter-btn" data-filter="valves">Fabricated Valves</button>
+        <button class="gallery-filter-btn" data-filter="doors">Inspection Doors</button>
+        <button class="gallery-filter-btn" data-filter="pallets">Spill Pallets</button>
+      </div>
+
+      <!-- Fabricated Valves -->
+      <div class="gallery-category" data-category="valves">
+        <p class="gallery-category__label">Fabricated Valves</p>
+        <div class="cat-grid">
+          <a href="valve-leadscrew-circular.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-04.jpg" alt="Leadscrew Circular Slide Gate" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Leadscrew Circular Slide Gate</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-leadscrew-square.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.jpg" alt="Leadscrew Square Slide Gate" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Leadscrew Square Slide Gate</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-manual-circular.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.jpg" alt="Manual Circular Slide Gate" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Manual Circular Slide Gate</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-manual-square.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide Gate" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Manual Square Slide Gate</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-rack-pinion.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.jpg" alt="Rack & Pinion Slide Gate" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Rack &amp; Pinion Slide Gate</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-type-52.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/New%20folder/untitled.52.jpg" alt="Fabricated Valve Series 52" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Fabricated Valve — Series 52</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-type-56.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/New%20folder/untitled.56.jpg" alt="Fabricated Valve Series 56" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Fabricated Valve — Series 56</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="valve-type-59.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/VALVE%20ALBUM/New%20folder/untitled.59.jpg" alt="Fabricated Valve Series 59" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Fabricated Valve — Series 59</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Inspection Doors -->
+      <div class="gallery-category" data-category="doors">
+        <p class="gallery-category__label">Inspection Doors</p>
+        <div class="cat-grid">
+          <a href="inspection-door-standard.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/inspection-doors/standard-door/1.jpg" alt="Standard Door" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Standard Door</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="inspection-door-single-bar.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/inspection-doors/single-bar-door/1.jpg" alt="Single Bar Door" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Single Bar Door</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="inspection-door-double-bar.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/inspection-doors/double-bar-door/1.jpg" alt="Double Bar Door" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Double Bar Door</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Spill Pallets -->
+      <div class="gallery-category" data-category="pallets">
+        <p class="gallery-category__label">Spill Pallets</p>
+        <div class="cat-grid">
+          <a href="spill-pallet-932.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/spill-pallets/932/1.jpg" alt="Spill Pallet 932" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Spill Pallet 932</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="spill-pallet-1245.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/spill-pallets/1245/1.jpg" alt="Spill Pallet 1245" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Spill Pallet 1245</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+          <a href="spill-pallet-1252.html" class="vcard">
+            <div class="vcard__img-wrap">
+              <img src="images/spill-pallets/1252/1.jpg" alt="Spill Pallet 1252" class="vcard__img" />
+            </div>
+            <div class="vcard__footer">
+              <span class="vcard__name">Spill Pallet 1252</span>
+              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <h3 class="footer__heading">Contact Information</h3>
+        <div class="footer__item">
+          <span class="footer__label">Telephone:</span>
+          <a href="tel:+441513557474" class="footer__value">+44 151 355 7474</a>
+        </div>
+        <div class="footer__item">
+          <span class="footer__label">Email:</span>
+          <a href="mailto:enquiries@ensignsiteservice.co.uk" class="footer__value">enquiries@ensignsiteservice.co.uk</a>
+        </div>
+        <div class="footer__item">
+          <span class="footer__label">Address:</span>
+          <address class="footer__value footer__address">
+            Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom
+          </address>
+        </div>
+      </div>
+      <div class="footer__map">
+        <iframe title="Ensign Manufacturing Location"
+          src="https://maps.google.com/maps?q=Unit+5+Blyth+Rd+Oldcotes+Worksop+S81+8JE+United+Kingdom&t=&z=15&ie=UTF8&iwloc=&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer__brands">
+      <span class="footer__brands-label">Our Family of Brands</span>
+      <div class="footer__brand-logos">
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN MANUFACTURING.png" alt="Ensign Manufacturing" />
+          <span class="footer__brand-def">Industrial Components</span>
+        </a>
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN SITE SERVICE.png" alt="Ensign Site Service" />
+          <span class="footer__brand-def">On-Site Solutions</span>
+        </a>
+        <a href="#" class="footer__brand-logo-item">
+          <img src="images/logos/ENSIGN DESIGN STUDIO.png" alt="Ensign Design Studio" />
+          <span class="footer__brand-def">Creative &amp; Design</span>
+        </a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
+      <p>&copy; 2025 Ensign Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
+    const categories = document.querySelectorAll('.gallery-category');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        categories.forEach(cat => {
+          if (filter === 'all' || cat.dataset.category === filter) {
+            cat.removeAttribute('data-hidden');
+          } else {
+            cat.setAttribute('data-hidden', '');
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
