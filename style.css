@@ -1329,13 +1329,13 @@ body {
 
 .showcase {
   background: #f0f0ec;
-  padding: 72px 0 56px;
+  padding: 72px 0 64px;
   overflow: hidden;
 }
 
 .showcase__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 52px;
 }
 
 .showcase__eyebrow {
@@ -1354,9 +1354,8 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* Stage: viewport + side nav buttons */
+/* Stage: overflow-clipped viewport + flanking nav buttons */
 .showcase__stage {
-  position: relative;
   display: flex;
   align-items: center;
 }
@@ -1364,42 +1363,39 @@ body {
 .showcase__viewport {
   flex: 1;
   overflow: hidden;
+  /* clip the sliding track */
 }
 
+/* Track: JS sets translateX to centre the active slide */
 .showcase__track {
   display: flex;
-  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  gap: 20px;
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  will-change: transform;
 }
 
-/* Each slide */
+/* Each slide — fixed width; opacity & scale controlled by JS */
 .showcase__slide {
-  flex: 0 0 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0 80px;
-  box-sizing: border-box;
-}
-
-.showcase__img-link {
-  display: block;
-  width: 100%;
-  max-width: 680px;
+  flex: 0 0 280px;
+  width: 280px;
+  transition: opacity 0.55s ease, transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0.15; /* overridden immediately by goToSlide(0) */
 }
 
 .showcase__img {
   width: 100%;
-  height: 420px;
+  height: 320px;
   object-fit: contain;
-  transition: transform 0.4s ease;
+  display: block;
+  border-radius: 10px;
 }
 
-.showcase__img-link:hover .showcase__img { transform: scale(1.03); }
-
-.showcase__info {
+/* Centred caption — text updates via JS on each slide change */
+.showcase__caption {
   text-align: center;
-  margin-top: 36px;
-  max-width: 520px;
+  margin-top: 44px;
+  padding: 0 24px;
+  min-height: 110px; /* prevents layout jump during text swap */
 }
 
 .showcase__name {
@@ -1407,13 +1403,17 @@ body {
   font-weight: 700;
   color: #0d1117;
   margin-bottom: 10px;
+  transition: opacity 0.3s;
 }
 
 .showcase__desc {
   font-size: 15px;
   color: #6b7280;
   line-height: 1.7;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .showcase__cta {
@@ -1431,23 +1431,24 @@ body {
 /* Circular nav buttons */
 .showcase__nav {
   flex-shrink: 0;
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255,255,255,0.9);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(0,0,0,0.10);
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1;
   color: #111827;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 16px;
+  margin: 0 12px;
   transition: background 0.2s, box-shadow 0.2s, transform 0.15s;
   box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  z-index: 2;
 }
 
 .showcase__nav:hover {
@@ -1461,7 +1462,7 @@ body {
   display: flex;
   justify-content: center;
   gap: 8px;
-  margin-top: 36px;
+  margin-top: 32px;
 }
 
 .showcase__dot {
@@ -1479,9 +1480,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .showcase__slide { padding: 0 16px; }
-  .showcase__img { height: 280px; }
+  .showcase__slide { flex: 0 0 200px; width: 200px; }
+  .showcase__img { height: 220px; }
   .showcase__nav { width: 40px; height: 40px; font-size: 20px; margin: 0 6px; }
+  .showcase__name { font-size: 18px; }
 }
 
 /* ======================================
