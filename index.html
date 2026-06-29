@@ -104,11 +104,12 @@
       <!-- Right Actions -->
       <div class="header__actions">
         <a href="/contact" class="btn btn--enquiry">Get enquiry</a>
-        <button class="header__cart" aria-label="Cart">
+        <a href="basket.html" class="header__cart" aria-label="Cart" style="position:relative;">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
           </svg>
-        </button>
+          <span id="cartBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#e53e3e;color:#fff;font-size:11px;font-weight:700;width:18px;height:18px;border-radius:50%;align-items:center;justify-content:center;">0</span>
+        </a>
         <button class="header__burger" aria-label="Menu">
           <span></span><span></span><span></span>
         </button>
@@ -482,5 +483,6 @@
     goTo(CLONE, true); // initialise at first real slide
     startTimer();
   </script>
+  <script src="cart.js"></script>
 </body>
 </html>

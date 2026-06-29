@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Basket – Ensign Manufacturing</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/logos/ENSIGN MANUFACTURING ICON.png" />
+  <link rel="shortcut icon" href="favicon.ico" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    .basket { max-width: 1100px; margin: 60px auto; padding: 0 24px 80px; }
+    .basket__heading { font-size: 2rem; font-weight: 800; margin-bottom: 8px; }
+    .basket__sub { color: #666; margin-bottom: 40px; }
+    .basket__layout { display: grid; grid-template-columns: 1fr 340px; gap: 32px; align-items: start; }
+    @media(max-width:860px){ .basket__layout { grid-template-columns: 1fr; } }
+
+    /* Items */
+    .basket__items { display: flex; flex-direction: column; gap: 20px; }
+    .bitem { display: grid; grid-template-columns: 90px 1fr auto; gap: 20px; align-items: center; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; }
+    @media(max-width:500px){ .bitem { grid-template-columns: 64px 1fr; } }
+    .bitem__img { width: 90px; height: 90px; object-fit: cover; border-radius: 8px; background: #f3f4f6; }
+    .bitem__name { font-weight: 700; font-size: 1rem; margin-bottom: 4px; }
+    .bitem__meta { font-size: 0.85rem; color: #666; margin-bottom: 10px; }
+    .bitem__price { font-size: 0.95rem; font-weight: 600; color: #1a1a1a; }
+    .bitem__actions { display: flex; flex-direction: column; align-items: flex-end; gap: 12px; }
+    .bitem__qty { display: flex; align-items: center; gap: 6px; }
+    .bitem__qty-btn { width: 30px; height: 30px; border: 1px solid #d1d5db; border-radius: 6px; background: #f9fafb; font-size: 1.1rem; cursor: pointer; display: flex; align-items: center; justify-content: center; font-weight: 700; color: #374151; }
+    .bitem__qty-btn:hover { background: #e5e7eb; }
+    .bitem__qty-input { width: 42px; height: 30px; text-align: center; border: 1px solid #d1d5db; border-radius: 6px; font-size: 0.95rem; font-weight: 600; }
+    .bitem__remove { font-size: 0.8rem; color: #ef4444; cursor: pointer; background: none; border: none; padding: 0; }
+    .bitem__remove:hover { text-decoration: underline; }
+    .bitem__line-total { font-weight: 700; font-size: 1rem; white-space: nowrap; }
+
+    /* Summary */
+    .basket__summary { background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; position: sticky; top: 24px; }
+    .basket__summary h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; }
+    .basket__summary-row { display: flex; justify-content: space-between; margin-bottom: 12px; font-size: 0.95rem; color: #444; }
+    .basket__summary-row--total { font-weight: 800; font-size: 1.1rem; color: #1a1a1a; border-top: 1px solid #e5e7eb; padding-top: 14px; margin-top: 8px; }
+    .basket__vat { font-size: 0.8rem; color: #888; margin-bottom: 20px; }
+    .basket__btn { display: block; width: 100%; padding: 14px; border-radius: 8px; font-weight: 700; font-size: 1rem; text-align: center; cursor: pointer; border: none; margin-bottom: 12px; text-decoration: none; }
+    .basket__btn--primary { background: #091c57; color: #fff; }
+    .basket__btn--primary:hover { background: #0d2575; }
+    .basket__btn--secondary { background: #f3f4f6; color: #1a1a1a; }
+    .basket__btn--secondary:hover { background: #e5e7eb; }
+
+    /* Empty state */
+    .basket__empty { text-align: center; padding: 80px 24px; }
+    .basket__empty-icon { font-size: 4rem; margin-bottom: 16px; }
+    .basket__empty h2 { font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+    .basket__empty p { color: #666; margin-bottom: 24px; }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <a href="index.html" class="header__logo">
+          <img src="images/ENSIGN MANUFACTURING LOGO.png" alt="Ensign Manufacturing" class="header__logo-img" />
+        </a>
+      </div>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Product <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="inspection-doors.html" class="nav__drop-link">Inspection Door</a></li>
+              <li><a href="fabricated-valves.html" class="nav__drop-link">Fabricated Valves</a></li>
+              <li><a href="spill-pallets.html" class="nav__drop-link">Spill Pallet</a></li>
+            </ul>
+          </li>
+          <li class="nav__item nav__item--has-drop">
+            <a href="#" class="nav__link">Brochures <span class="nav__arrow">&#8964;</span></a>
+            <ul class="nav__dropdown">
+              <li><a href="PDF/ENSIGN-VALVES-A.pdf" class="nav__drop-link" target="_blank">Valves Brochure</a></li>
+              <li><a href="PDF/ENSIGN-INSPECTION%20DOOR-A.pdf" class="nav__drop-link" target="_blank">Inspection Door Brochure</a></li>
+            </ul>
+          </li>
+          <li class="nav__item"><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header__actions">
+        <a href="mailto:enquiries@ensignsiteservice.co.uk" class="btn btn--enquiry">Get enquiry</a>
+        <a href="basket.html" class="header__cart" aria-label="Cart" style="position:relative;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span id="cartBadge" style="display:none;position:absolute;top:-6px;right:-6px;background:#e53e3e;color:#fff;font-size:11px;font-weight:700;width:18px;height:18px;border-radius:50%;align-items:center;justify-content:center;">0</span>
+        </a>
+        <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <main class="basket">
+    <h1 class="basket__heading">Your Basket</h1>
+    <p class="basket__sub">Review your items, adjust quantities, then request a quote.</p>
+
+    <!-- Empty state (shown when cart is empty) -->
+    <div class="basket__empty" id="basketEmpty" style="display:none;">
+      <div class="basket__empty-icon">🛒</div>
+      <h2>Your basket is empty</h2>
+      <p>Browse our products and add items to your basket.</p>
+      <a href="index.html" class="btn btn--enquiry" style="display:inline-block;">Continue Shopping</a>
+    </div>
+
+    <!-- Cart content -->
+    <div class="basket__layout" id="basketContent">
+      <div class="basket__items" id="basketItems"></div>
+
+      <div class="basket__summary">
+        <h3>Order Summary</h3>
+        <div class="basket__summary-row">
+          <span>Items (<span id="summaryCount">0</span>)</span>
+          <span id="summarySubtotal">£0.00</span>
+        </div>
+        <div class="basket__summary-row basket__summary-row--total">
+          <span>Subtotal (excl. VAT)</span>
+          <span id="summaryTotal">£0.00</span>
+        </div>
+        <p class="basket__vat">VAT will be calculated at checkout. Final price confirmed on quote.</p>
+        <button class="basket__btn basket__btn--primary" onclick="proceedToQuote()">
+          Request a Quote
+        </button>
+        <a href="index.html" class="basket__btn basket__btn--secondary">
+          Continue Shopping
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__contact">
+        <h3 class="footer__heading">Contact Information</h3>
+        <div class="footer__item"><span class="footer__label">Telephone:</span><a href="tel:+441513557474" class="footer__value">+44 151 355 7474</a></div>
+        <div class="footer__item"><span class="footer__label">Email:</span><a href="mailto:enquiries@ensignsiteservice.co.uk" class="footer__value">enquiries@ensignsiteservice.co.uk</a></div>
+        <div class="footer__item"><span class="footer__label">Address:</span><address class="footer__value footer__address">Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom</address></div>
+      </div>
+      <div class="footer__map">
+        <iframe title="Location" src="https://maps.google.com/maps?q=Unit+5+Blyth+Rd+Oldcotes+Worksop+S81+8JE+United+Kingdom&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
+      <p>&copy; 2025 Ensign Manufacturing. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script>
+    function fmt(n) { return '£' + n.toFixed(2); }
+
+    function renderBasket() {
+      const items = Cart.get();
+      const itemsEl = document.getElementById('basketItems');
+      const emptyEl = document.getElementById('basketEmpty');
+      const contentEl = document.getElementById('basketContent');
+
+      if (items.length === 0) {
+        emptyEl.style.display = 'block';
+        contentEl.style.display = 'none';
+        return;
+      }
+      emptyEl.style.display = 'none';
+      contentEl.style.display = 'grid';
+
+      itemsEl.innerHTML = items.map(item => {
+        const meta = [item.variant, item.bodyMat].filter(Boolean).join(' · ');
+        const lineTotal = item.price * item.qty;
+        return `
+          <div class="bitem" data-key="${encodeURIComponent(item.key)}">
+            <img class="bitem__img" src="${item.image || 'images/logos/ENSIGN MANUFACTURING ICON.png'}" alt="${item.name}" onerror="this.src='images/logos/ENSIGN MANUFACTURING ICON.png'" />
+            <div>
+              <div class="bitem__name"><a href="${item.url}" style="color:inherit;text-decoration:none;">${item.name}</a></div>
+              ${meta ? `<div class="bitem__meta">${meta}</div>` : ''}
+              <div class="bitem__price">${fmt(item.price)} each</div>
+            </div>
+            <div class="bitem__actions">
+              <div class="bitem__line-total">${fmt(lineTotal)}</div>
+              <div class="bitem__qty">
+                <button class="bitem__qty-btn" onclick="changeQty('${encodeURIComponent(item.key)}', -1)">−</button>
+                <input class="bitem__qty-input" type="number" min="1" value="${item.qty}" onchange="setQty('${encodeURIComponent(item.key)}', this.value)" />
+                <button class="bitem__qty-btn" onclick="changeQty('${encodeURIComponent(item.key)}', 1)">+</button>
+              </div>
+              <button class="bitem__remove" onclick="removeItem('${encodeURIComponent(item.key)}')">Remove</button>
+            </div>
+          </div>`;
+      }).join('');
+
+      const count = Cart.count();
+      const total = Cart.total();
+      document.getElementById('summaryCount').textContent = count;
+      document.getElementById('summarySubtotal').textContent = fmt(total);
+      document.getElementById('summaryTotal').textContent = fmt(total);
+    }
+
+    function changeQty(encodedKey, delta) {
+      const key = decodeURIComponent(encodedKey);
+      const items = Cart.get();
+      const item = items.find(i => i.key === key);
+      if (item) Cart.update(key, item.qty + delta);
+      renderBasket();
+    }
+
+    function setQty(encodedKey, val) {
+      const key = decodeURIComponent(encodedKey);
+      const qty = parseInt(val);
+      if (qty >= 1) Cart.update(key, qty);
+      renderBasket();
+    }
+
+    function removeItem(encodedKey) {
+      Cart.remove(decodeURIComponent(encodedKey));
+      renderBasket();
+    }
+
+    function proceedToQuote() {
+      const items = Cart.get();
+      if (items.length === 0) return;
+      const lines = items.map(i => {
+        const meta = [i.variant, i.bodyMat].filter(Boolean).join(', ');
+        return `${i.name}${meta ? ' (' + meta + ')' : ''} × ${i.qty} @ ${fmt(i.price)}`;
+      }).join('\n');
+      const total = fmt(Cart.total());
+      const body = encodeURIComponent(`Quote Request\n\n${lines}\n\nSubtotal (excl. VAT): ${total}\n\nPlease provide a formal quotation for the above items.`);
+      window.location.href = `mailto:enquiries@ensignsiteservice.co.uk?subject=Quote%20Request%20from%20Website&body=${body}`;
+    }
+
+    renderBasket();
+  </script>
+</body>
+</html>

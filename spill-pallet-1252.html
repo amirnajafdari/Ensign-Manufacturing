@@ -98,7 +98,13 @@
         </div>
 
         <div class="vprod__cart-row">
-          <button class="vprod__add-btn" onclick="window.location='mailto:enquiries@ensignsiteservice.co.uk?subject=Quote Request – Spill Pallet 1252'">Request a Quote</button>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+            <label style="font-size:0.85rem;font-weight:600;color:#555;">Qty:</label>
+            <button type="button" onclick="document.getElementById('qtyInput').value=Math.max(1,+document.getElementById('qtyInput').value-1)" style="width:30px;height:30px;border:1px solid #d1d5db;border-radius:6px;background:#f9fafb;font-size:1.1rem;font-weight:700;cursor:pointer;">&#8722;</button>
+            <input id="qtyInput" type="number" min="1" value="1" style="width:50px;height:30px;text-align:center;border:1px solid #d1d5db;border-radius:6px;font-size:0.95rem;font-weight:600;" />
+            <button type="button" onclick="document.getElementById('qtyInput').value=+document.getElementById('qtyInput').value+1" style="width:30px;height:30px;border:1px solid #d1d5db;border-radius:6px;background:#f9fafb;font-size:1.1rem;font-weight:700;cursor:pointer;">+</button>
+          </div>
+          <button class="vprod__add-btn" onclick="addToCart()">Add to Basket</button>
         </div>
 
         <hr class="vprod__divider" />
@@ -163,5 +169,6 @@
     document.getElementById('suggPrev').addEventListener('click', () => suggTrack.scrollBy({ left: -480, behavior: 'smooth' }));
     document.getElementById('suggNext').addEventListener('click', () => suggTrack.scrollBy({ left: 480, behavior: 'smooth' }));
   </script>
+  <script src="cart.js"></script>
 </body>
 </html>
