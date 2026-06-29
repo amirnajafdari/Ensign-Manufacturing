@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -6,56 +6,287 @@
   <title>Product Gallery – Valves, Inspection Doors & Spill Pallets | Ensign Manufacturing</title>
   <meta name="description" content="Browse our product gallery featuring fabricated valves, inspection doors and spill pallets. Ensign Manufacturing serves customers in Huddersfield, Cheshire and across the UK." />
   <link rel="canonical" href="https://www.ensignmanufacturing.co.uk/gallery.html" />
-  <!-- Open Graph / Social Preview -->
-  <meta property="og:type"        content="website" />
-  <meta property="og:site_name"   content="Ensign Manufacturing" />
-  <meta property="og:url"         content="https://www.ensignmanufacturing.co.uk/gallery.html" />  <meta property="og:image"       content="https://www.ensignmanufacturing.co.uk/images/logos/og-image.png" />
-  <!-- Twitter Card -->
-  <meta name="twitter:card"        content="summary_large_image" />  <meta name="twitter:image"       content="https://www.ensignmanufacturing.co.uk/images/logos/og-image.png" />
+  <meta property="og:type"      content="website" />
+  <meta property="og:site_name" content="Ensign Manufacturing" />
+  <meta property="og:url"       content="https://www.ensignmanufacturing.co.uk/gallery.html" />
+  <meta property="og:image"     content="https://www.ensignmanufacturing.co.uk/images/logos/og-image.png" />
+  <meta name="twitter:card"     content="summary_large_image" />
+  <meta name="twitter:image"    content="https://www.ensignmanufacturing.co.uk/images/logos/og-image.png" />
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" type="image/png" href="images/logos/ENSIGN MANUFACTURING ICON.png" />
   <link rel="shortcut icon" href="favicon.ico" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    .gallery-filters {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
+
+    /* ── GALLERY HERO ── */
+    .gl-hero {
+      background: linear-gradient(135deg, #060f2e 0%, #091c57 55%, #0d2575 100%);
+      padding: 80px 32px 72px;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
     }
-    .gallery-filter-btn {
-      padding: 8px 22px;
-      border-radius: 999px;
-      border: 1.5px solid #d1d5db;
-      background: #fff;
+    .gl-hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+      top: -200px; right: -100px;
+      pointer-events: none;
+    }
+    .gl-hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.12) 0%, transparent 70%);
+      bottom: -180px; left: -80px;
+      pointer-events: none;
+    }
+    .gl-hero__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: rgba(255,255,255,0.55);
       font-size: 13px;
       font-weight: 600;
-      color: #374151;
-      cursor: pointer;
-      transition: all 0.2s;
-      font-family: 'Inter', sans-serif;
+      text-decoration: none;
+      margin-bottom: 28px;
+      letter-spacing: 0.02em;
+      transition: color 0.2s;
     }
-    .gallery-filter-btn:hover,
-    .gallery-filter-btn.active {
-      background: #2563eb;
-      border-color: #2563eb;
-      color: #fff;
-    }
-    .gallery-category {
-      margin-bottom: 52px;
-    }
-    .gallery-category__label {
+    .gl-hero__back:hover { color: #fff; }
+    .gl-hero__eyebrow {
+      display: inline-block;
       font-size: 11px;
       font-weight: 700;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #60a5fa;
+      margin-bottom: 16px;
+    }
+    .gl-hero__title {
+      font-size: clamp(38px, 6vw, 64px);
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -1px;
+      line-height: 1.08;
+      margin: 0 0 20px;
+    }
+    .gl-hero__title span {
+      background: linear-gradient(90deg, #60a5fa, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gl-hero__sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* ── GALLERY SECTION ── */
+    .gl-section {
+      background: #f0f2f8;
+      padding: 64px 32px 96px;
+      min-height: 60vh;
+    }
+    .gl-section__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Category label */
+    .gl-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 32px;
+    }
+    .gl-label__text {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #9ca3af;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
-      border-bottom: 1px solid #e5e7eb;
+      white-space: nowrap;
     }
-    .gallery-category[data-hidden] { display: none; }
+    .gl-label__line {
+      flex: 1;
+      height: 1px;
+      background: #e5e7eb;
+    }
+    .gl-label__count {
+      font-size: 11px;
+      font-weight: 700;
+      color: #c7d2fe;
+      background: #091c57;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+
+    /* ── PHOTO GRID ── */
+    .gl-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    /* Photo card */
+    .gl-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      aspect-ratio: 4 / 3;
+      cursor: pointer;
+      box-shadow: 0 4px 24px rgba(9,28,87,0.12);
+      background: #1a1a2e;
+    }
+    .gl-card__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.4s;
+      display: block;
+    }
+    .gl-card:hover .gl-card__img {
+      transform: scale(1.06);
+      filter: brightness(0.75);
+    }
+
+    /* Hover overlay */
+    .gl-card__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(6,15,46,0.92) 0%, rgba(6,15,46,0.3) 50%, transparent 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px;
+    }
+    .gl-card:hover .gl-card__overlay { opacity: 1; }
+
+    .gl-card__name {
+      font-size: 17px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.2px;
+      margin-bottom: 10px;
+      transform: translateY(8px);
+      transition: transform 0.35s ease;
+    }
+    .gl-card:hover .gl-card__name { transform: translateY(0); }
+
+    .gl-card__actions {
+      display: flex;
+      gap: 10px;
+      transform: translateY(12px);
+      transition: transform 0.35s ease 0.04s;
+    }
+    .gl-card:hover .gl-card__actions { transform: translateY(0); }
+
+    .gl-card__view-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: #fff;
+      color: #091c57;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .gl-card__view-btn:hover { background: #e0e7ff; }
+
+    .gl-card__zoom-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px; height: 36px;
+      background: rgba(255,255,255,0.15);
+      border: 1.5px solid rgba(255,255,255,0.3);
+      border-radius: 8px;
+      color: #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .gl-card__zoom-btn:hover { background: rgba(255,255,255,0.25); }
+
+    /* Corner badge */
+    .gl-card__badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(9,28,87,0.8);
+      color: #c7d2fe;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      backdrop-filter: blur(6px);
+    }
+
+    /* ── LIGHTBOX ── */
+    .gl-lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(4, 9, 28, 0.96);
+      backdrop-filter: blur(8px);
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+    .gl-lightbox.open { display: flex; }
+    .gl-lightbox__close {
+      position: absolute;
+      top: 20px; right: 24px;
+      background: rgba(255,255,255,0.1);
+      border: 1.5px solid rgba(255,255,255,0.2);
+      color: #fff;
+      width: 44px; height: 44px;
+      border-radius: 10px;
+      font-size: 22px;
+      cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+      transition: background 0.2s;
+    }
+    .gl-lightbox__close:hover { background: rgba(255,255,255,0.2); }
+    .gl-lightbox__img {
+      max-width: 90vw;
+      max-height: 85vh;
+      object-fit: contain;
+      border-radius: 12px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+    }
+    .gl-lightbox__caption {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 640px) {
+      .gl-hero { padding: 56px 20px 48px; }
+      .gl-section { padding: 40px 16px 64px; }
+      .gl-grid { grid-template-columns: 1fr; }
+      .gl-card { aspect-ratio: 3 / 2; }
+    }
   </style>
 </head>
 <body>
@@ -93,190 +324,85 @@
         </ul>
       </nav>
       <div class="header__actions">
+        <a href="basket.html" class="header__cart" id="cartIcon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4zM3 6h18M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span class="header__cart-label">Basket</span>
+          <span id="cartBadge" class="cart-badge">0</span>
+        </a>
         <button class="header__burger" aria-label="Menu"><span></span><span></span><span></span></button>
       </div>
     </div>
   </header>
 
-  <!-- Page Hero -->
-  <section class="cat-hero">
-    <div class="cat-hero__inner">
-      <a href="index.html" class="product-page__back">&#8592; Back to Home</a>
-      <h1 class="cat-hero__title">Product Gallery</h1>
-      <p class="cat-hero__sub">Browse our full range of precision-engineered industrial components.</p>
+  <!-- HERO -->
+  <section class="gl-hero">
+    <a href="index.html" class="gl-hero__back">
+      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+      Back to Home
+    </a>
+    <p class="gl-hero__eyebrow">Product Photography</p>
+    <h1 class="gl-hero__title">Our <span>Gallery</span></h1>
+    <p class="gl-hero__sub">A showcase of precision-engineered industrial components built to perform in the most demanding environments.</p>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gl-section">
+    <div class="gl-section__inner">
+
+      <div class="gl-label">
+        <span class="gl-label__text">Manual Square Slide Gate</span>
+        <span class="gl-label__line"></span>
+        <span class="gl-label__count">2 photos</span>
+      </div>
+
+      <div class="gl-grid">
+
+        <div class="gl-card" onclick="openLightbox('images/Gallery/photo_2026-06-29_10-15-02.jpg', 'Manual Square Slide Gate')">
+          <img src="images/Gallery/photo_2026-06-29_10-15-02.jpg" alt="Manual Square Slide Gate" class="gl-card__img" />
+          <span class="gl-card__badge">Fabricated Valve</span>
+          <div class="gl-card__overlay">
+            <p class="gl-card__name">Manual Square Slide Gate</p>
+            <div class="gl-card__actions">
+              <a href="valve-manual-square.html" class="gl-card__view-btn" onclick="event.stopPropagation()">
+                View Product
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              <button class="gl-card__zoom-btn" title="Enlarge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 0H9m4-4v8"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="gl-card" onclick="openLightbox('images/Gallery/photo_2026-06-29_10-16-33.jpg', 'Manual Square Slide Gate')">
+          <img src="images/Gallery/photo_2026-06-29_10-16-33.jpg" alt="Manual Square Slide Gate" class="gl-card__img" />
+          <span class="gl-card__badge">Fabricated Valve</span>
+          <div class="gl-card__overlay">
+            <p class="gl-card__name">Manual Square Slide Gate</p>
+            <div class="gl-card__actions">
+              <a href="valve-manual-square.html" class="gl-card__view-btn" onclick="event.stopPropagation()">
+                View Product
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+              </a>
+              <button class="gl-card__zoom-btn" title="Enlarge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35M17 11A6 6 0 115 11a6 6 0 0112 0zm-2 0H9m4-4v8"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
-  <!-- Gallery -->
-  <section class="cat-grid-section">
-    <div class="cat-grid-section__inner">
-
-      <!-- Filter buttons -->
-      <div class="gallery-filters">
-        <button class="gallery-filter-btn active" data-filter="all">All Products</button>
-        <button class="gallery-filter-btn" data-filter="valves">Fabricated Valves</button>
-        <button class="gallery-filter-btn" data-filter="doors">Inspection Doors</button>
-        <button class="gallery-filter-btn" data-filter="pallets">Spill Pallets</button>
-      </div>
-
-      <!-- Fabricated Valves -->
-      <div class="gallery-category" data-category="valves">
-        <p class="gallery-category__label">Fabricated Valves</p>
-        <div class="cat-grid">
-          <a href="valve-leadscrew-circular.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-04.jpg" alt="Leadscrew Circular Slide Gate" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Leadscrew Circular Slide Gate</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-leadscrew-square.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.jpg" alt="Leadscrew Square Slide Gate" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Leadscrew Square Slide Gate</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-manual-circular.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.jpg" alt="Manual Circular Slide Gate" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Manual Circular Slide Gate</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-manual-square.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide Gate" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Manual Square Slide Gate</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-rack-pinion.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.jpg" alt="Rack & Pinion Slide Gate" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Rack &amp; Pinion Slide Gate</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-type-52.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/New%20folder/untitled.52.jpg" alt="Fabricated Valve Series 52" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Fabricated Valve — Series 52</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-type-56.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/New%20folder/untitled.56.jpg" alt="Fabricated Valve Series 56" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Fabricated Valve — Series 56</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="valve-type-59.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/VALVE%20ALBUM/New%20folder/untitled.59.jpg" alt="Fabricated Valve Series 59" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Fabricated Valve — Series 59</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Inspection Doors -->
-      <div class="gallery-category" data-category="doors">
-        <p class="gallery-category__label">Inspection Doors</p>
-        <div class="cat-grid">
-          <a href="inspection-door-standard.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/inspection-doors/standard-door/1.jpg" alt="Standard Door" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Standard Door</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="inspection-door-single-bar.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/inspection-doors/single-bar-door/1.jpg" alt="Single Bar Door" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Single Bar Door</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="inspection-door-double-bar.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/inspection-doors/double-bar-door/1.jpg" alt="Double Bar Door" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Double Bar Door</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-      <!-- Spill Pallets -->
-      <div class="gallery-category" data-category="pallets">
-        <p class="gallery-category__label">Spill Pallets</p>
-        <div class="cat-grid">
-          <a href="spill-pallet-932.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/spill-pallets/932/1.jpg" alt="Spill Pallet 932" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Spill Pallet 932</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="spill-pallet-1245.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/spill-pallets/1245/1.jpg" alt="Spill Pallet 1245" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Spill Pallet 1245</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="spill-pallet-1252.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/spill-pallets/1252/1.jpg" alt="Spill Pallet 1252" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Spill Pallet 1252</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-          <a href="spill-pallet-spillage-decking.html" class="vcard">
-            <div class="vcard__img-wrap">
-              <img src="images/spill-pallets/valve.61.jpg" alt="Spillage Decking" class="vcard__img" />
-            </div>
-            <div class="vcard__footer">
-              <span class="vcard__name">Spillage Decking</span>
-              <span class="vcard__btn">View <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></span>
-            </div>
-          </a>
-        </div>
-      </div>
-
-    </div>
-  </section>
+  <!-- LIGHTBOX -->
+  <div class="gl-lightbox" id="glLightbox" onclick="closeLightbox()">
+    <button class="gl-lightbox__close" onclick="closeLightbox()">&#x2715;</button>
+    <img src="" alt="" class="gl-lightbox__img" id="glLightboxImg" onclick="event.stopPropagation()" />
+    <p class="gl-lightbox__caption" id="glLightboxCaption"></p>
+  </div>
 
   <!-- Footer -->
   <footer class="footer">
@@ -293,9 +419,7 @@
         </div>
         <div class="footer__item">
           <span class="footer__label">Address:</span>
-          <address class="footer__value footer__address">
-            Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom
-          </address>
+          <address class="footer__value footer__address">Unit 5 Blyth Rd,<br />Oldcotes, Worksop<br />S81 8JE<br />United Kingdom</address>
         </div>
       </div>
       <div class="footer__map">
@@ -322,6 +446,17 @@
         </a>
       </div>
     </div>
+    <div style="border-top:1px solid rgba(255,255,255,0.08);padding:14px 32px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 16px;">
+      <span style="font-size:0.72rem;font-weight:700;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:0.08em;">Areas We Serve:</span>
+      <div style="display:flex;flex-wrap:wrap;gap:6px;align-items:center;">
+        <a href="huddersfield.html" style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:3px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:20px;transition:color 0.2s,border-color 0.2s;">📍 Huddersfield</a>
+        <a href="cheshire.html"     style="font-size:0.75rem;color:rgba(255,255,255,0.65);text-decoration:none;padding:3px 10px;border:1px solid rgba(255,255,255,0.12);border-radius:20px;transition:color 0.2s,border-color 0.2s;">📍 Cheshire</a>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.45);padding:3px 10px;">📍 West Yorkshire</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.45);padding:3px 10px;">📍 Manchester</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.45);padding:3px 10px;">📍 Sheffield</span>
+        <span style="font-size:0.75rem;color:rgba(255,255,255,0.45);padding:3px 10px;">📍 Nationwide</span>
+      </div>
+    </div>
     <div class="footer__bottom">
       <a href="privacy-policy.html" class="footer__policy-link">Privacy Policy</a>
       <p>&copy; 2025 Ensign Manufacturing. All rights reserved.</p>
@@ -329,25 +464,18 @@
   </footer>
 
   <script>
-    const filterBtns = document.querySelectorAll('.gallery-filter-btn');
-    const categories = document.querySelectorAll('.gallery-category');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        categories.forEach(cat => {
-          if (filter === 'all' || cat.dataset.category === filter) {
-            cat.removeAttribute('data-hidden');
-          } else {
-            cat.setAttribute('data-hidden', '');
-          }
-        });
-      });
-    });
+    function openLightbox(src, caption) {
+      document.getElementById('glLightboxImg').src = src;
+      document.getElementById('glLightboxCaption').textContent = caption;
+      document.getElementById('glLightbox').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('glLightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
   </script>
-
   <script src="cart.js"></script>
 </body>
 </html>

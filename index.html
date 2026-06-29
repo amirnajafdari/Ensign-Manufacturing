@@ -224,17 +224,17 @@
       <button class="showcase__nav showcase__nav--prev" id="showcasePrev" aria-label="Previous">&#8249;</button>
       <div class="showcase__viewport">
         <div class="showcase__track" id="showcaseTrack">
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.png" alt="Leadscrew Circular Slide Gate" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.png"   alt="Leadscrew Square Slide Gate"   class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.png"     alt="Manual Circular Slide Gate"    class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.png"         alt="Manual Square Slide Gate"      class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.png"         alt="Rack &amp; Pinion Slide Gate"  class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.52.png"  alt="Fabricated Valve Series 52" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.56.png"  alt="Fabricated Valve Series 56" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/VALVE%20ALBUM/New%20folder/untitled.59.png"  alt="Fabricated Valve Series 59" class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/inspection-doors/standard-door/1.png"    alt="Standard Door"    class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/inspection-doors/single-bar-door/1.png"  alt="Single Bar Door"  class="showcase__img" /></div>
-          <div class="showcase__slide"><img src="images/inspection-doors/double-bar-door/1.png"  alt="Double Bar Door"  class="showcase__img" /></div>
+          <div class="showcase__slide"><a href="valve-leadscrew-circular.html"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20CIRCULAR%20SLIDE/LEADSCREW%20CIRCULAR%20SLIDE-01.png" alt="Leadscrew Circular Slide Gate" class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-leadscrew-square.html"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/LEADSCREW%20SQUARE%20SLIDE/LEADSCREW%20SQUARE%20SLIDE-01.png"   alt="Leadscrew Square Slide Gate"   class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-manual-circular.html"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20CIRCULAR%20SLIDE/MANUAL%20CIRCULAR%20SLIDE-01.png"     alt="Manual Circular Slide Gate"    class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-manual-square.html"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.png"         alt="Manual Square Slide Gate"      class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-rack-pinion.html"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/RACK%20%26%20PINION/Rock%20%26%20Pinion%20Slide-01.png"         alt="Rack &amp; Pinion Slide Gate"  class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-type-52.html"><img src="images/VALVE%20ALBUM/New%20folder/untitled.52.png"  alt="Fabricated Valve Series 52" class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-type-56.html"><img src="images/VALVE%20ALBUM/New%20folder/untitled.56.png"  alt="Fabricated Valve Series 56" class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="valve-type-59.html"><img src="images/VALVE%20ALBUM/New%20folder/untitled.59.png"  alt="Fabricated Valve Series 59" class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="inspection-door-standard.html"><img src="images/inspection-doors/standard-door/1.png"    alt="Standard Door"    class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="inspection-door-single-bar.html"><img src="images/inspection-doors/single-bar-door/1.png"  alt="Single Bar Door"  class="showcase__img" /></a></div>
+          <div class="showcase__slide"><a href="inspection-door-double-bar.html"><img src="images/inspection-doors/double-bar-door/1.png"  alt="Double Bar Door"  class="showcase__img" /></a></div>
         </div>
       </div>
       <button class="showcase__nav showcase__nav--next" id="showcaseNext" aria-label="Next">&#8250;</button>
@@ -244,7 +244,6 @@
     <div class="showcase__caption">
       <h3 class="showcase__name" id="showcaseName">Leadscrew Circular Slide Gate</h3>
       <p class="showcase__desc" id="showcaseDesc">Precision leadscrew-driven circular slide gate for accurate flow regulation in pipelines.</p>
-      <a href="valve-leadscrew-circular.html" class="showcase__cta" id="showcaseCta">View product &rarr;</a>
     </div>
 
     <div class="showcase__dots" id="showcaseDots">
@@ -444,9 +443,6 @@
       const p = scProducts[realIdx];
       document.getElementById('showcaseName').textContent = p.name;
       document.getElementById('showcaseDesc').textContent = p.desc;
-      const ctaEl = document.getElementById('showcaseCta');
-      ctaEl.textContent = p.cta;
-      ctaEl.href = p.href;
     }
 
     // After each animated slide, silently jump from clone to its real twin

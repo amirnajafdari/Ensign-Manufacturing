@@ -1527,10 +1527,18 @@ body {
   opacity: 0.15; /* overridden immediately by goToSlide(0) */
 }
 
+.showcase__slide a {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.showcase__slide a:hover .showcase__img { opacity: 0.88; }
+
 .showcase__img {
   width: 100%;
   height: 210px;
   object-fit: contain;
+  transition: opacity 0.2s;
   display: block;
   border-radius: 10px;
 }
