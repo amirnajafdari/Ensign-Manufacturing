@@ -847,10 +847,34 @@ body {
   padding: 48px 0 80px;
 }
 
+.cat-grid-section + .cat-grid-section {
+  padding-top: 0;
+  border-top: 1px solid #e5e7eb;
+}
+
 .cat-grid-section__inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
+}
+
+.cat-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #6b7280;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.cat-section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e5e7eb;
 }
 
 .cat-grid {
