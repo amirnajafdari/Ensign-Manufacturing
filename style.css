@@ -1647,7 +1647,7 @@ body {
 .home-gallery__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 200px);
+  grid-template-rows: repeat(2, 300px);
   gap: 14px;
 }
 .home-gallery__slot:nth-child(1) { grid-column: 1; grid-row: 1 / 3; }
