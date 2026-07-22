@@ -1616,13 +1616,36 @@ body {
    ====================================== */
 
 .home-gallery {
-  background: #f0f2f8;
+  background: linear-gradient(160deg, #060f2e 0%, #0d2270 45%, #091c57 100%);
   padding: 56px 0 64px;
+  position: relative;
+  overflow: hidden;
+}
+.home-gallery::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+  background-size: 48px 48px;
+  pointer-events: none;
+}
+.home-gallery::after {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(37,99,235,0.22) 0%, transparent 65%);
+  top: -200px; right: -150px;
+  pointer-events: none;
 }
 .home-gallery__inner {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 32px;
+  position: relative;
+  z-index: 1;
 }
 .home-gallery__header {
   display: flex;
@@ -1633,16 +1656,16 @@ body {
 .home-gallery__title {
   font-size: 22px;
   font-weight: 700;
-  color: #0d1117;
+  color: #ffffff;
 }
 .home-gallery__link {
   font-size: 14px;
   font-weight: 600;
-  color: #2563eb;
+  color: #93c5fd;
   text-decoration: none;
   transition: color 0.2s;
 }
-.home-gallery__link:hover { color: #1d4ed8; }
+.home-gallery__link:hover { color: #ffffff; }
 
 .home-gallery__grid {
   display: grid;
@@ -1657,20 +1680,25 @@ body {
 
 .home-gallery__slot {
   border-radius: 14px;
-  background: #dde3f2;
-  border: 2px dashed #b8c4e8;
+  background: linear-gradient(135deg, rgba(255,255,255,0.07) 0%, rgba(255,255,255,0.03) 100%);
+  border: 1.5px dashed rgba(255,255,255,0.2);
   overflow: hidden;
   position: relative;
-  transition: border-color 0.2s, box-shadow 0.2s;
+  transition: border-color 0.25s, box-shadow 0.25s;
   text-decoration: none;
   display: block;
+  backdrop-filter: blur(4px);
+}
+.home-gallery__slot:not(:has(img)):hover {
+  border-color: rgba(255,255,255,0.4);
+  background: linear-gradient(135deg, rgba(255,255,255,0.11) 0%, rgba(255,255,255,0.05) 100%);
 }
 .home-gallery__slot:has(img) {
   border: none;
-  box-shadow: 0 4px 20px rgba(9,28,87,0.1);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.35);
 }
 .home-gallery__slot:has(img):hover {
-  box-shadow: 0 8px 32px rgba(9,28,87,0.18);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
 }
 .home-gallery__slot img {
   width: 100%;
@@ -1697,14 +1725,15 @@ body {
   bottom: 50%; left: 50%;
   transform: translate(-50%, 50%);
   background: none;
-  color: #4a5fa3;
+  color: rgba(255,255,255,0.5);
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   padding: 0;
   text-align: center;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   text-shadow: none;
   white-space: nowrap;
+  text-transform: uppercase;
 }
 
 @media (max-width: 960px) {
