@@ -33,7 +33,6 @@ body {
   top: 0;
   z-index: 100;
   width: 100%;
-  overflow: hidden;
 }
 
 .header::before {
