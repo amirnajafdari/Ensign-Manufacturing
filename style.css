@@ -1705,16 +1705,30 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 14px 20px;
-  background: rgba(255,255,255,0.65);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  color: #0d1117;
-  font-size: 28px;
+  padding: 16px 22px;
+  background: linear-gradient(90deg, rgba(6,15,46,0.88) 0%, rgba(37,99,235,0.72) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #ffffff;
+  font-size: 20px;
   font-weight: 700;
-  letter-spacing: 0.02em;
-  text-shadow: none;
-  border-top: 1px solid rgba(9,28,87,0.08);
+  letter-spacing: 0.03em;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.3);
+  border-top: 2px solid rgba(99,162,255,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.home-gallery__label::after {
+  content: '→';
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.home-gallery__slot:hover .home-gallery__label::after {
+  transform: translateX(4px);
+  opacity: 1;
 }
 .home-gallery__slot:not(:has(img)) .home-gallery__label {
   position: absolute;
