@@ -530,13 +530,13 @@ body {
   font-size: clamp(38px, 4.5vw, 60px);
   font-weight: 800;
   line-height: 1.1;
-  color: #0d1117;
+  color: #091c57;
   margin-bottom: 18px;
   letter-spacing: -1px;
 }
 
 .hero__heading-accent {
-  background: linear-gradient(90deg, #2563eb, #0ea5e9);
+  background: linear-gradient(90deg, #091c57, #2563eb);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -544,7 +544,7 @@ body {
 
 .hero__eyebrow {
   font-size: 15px;
-  color: #6b7280;
+  color: #091c57;
   margin-bottom: 20px;
   font-weight: 400;
 }
@@ -552,7 +552,7 @@ body {
 .hero__body {
   font-size: 15.5px;
   line-height: 1.8;
-  color: #374151;
+  color: #091c57;
   margin-bottom: 32px;
   max-width: 460px;
 }
