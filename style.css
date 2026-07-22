@@ -36,7 +36,6 @@ body {
   overflow: hidden;
 }
 
-/* Coloured top accent stripe */
 .header::before {
   content: '';
   position: absolute;
@@ -47,7 +46,6 @@ body {
   z-index: 0;
 }
 
-/* Subtle radial colour blush */
 .header::after {
   content: '';
   position: absolute;
@@ -107,9 +105,9 @@ body {
   color: #1a2340;
   text-decoration: none;
   font-family: Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   border-radius: 8px;
   white-space: nowrap;
   transition: color 0.22s;
@@ -123,13 +121,13 @@ body {
   transform: translateX(-50%) scaleX(0);
   width: calc(100% - 24px);
   height: 2px;
-  background: linear-gradient(90deg, #091c57, #2563eb);
+  background: linear-gradient(90deg, #091c57, #2d4fd6);
   border-radius: 2px;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav__link:hover,
-.nav__item--has-drop:hover > .nav__link { color: #2563eb; }
+.nav__item--has-drop:hover > .nav__link { color: #091c57; }
 
 .nav__link:hover::after,
 .nav__item--has-drop:hover > .nav__link::after { transform: translateX(-50%) scaleX(1); }
@@ -221,8 +219,7 @@ body {
 }
 
 .header__cart {
-  background: linear-gradient(135deg, #ea6c00 0%, #f97316 100%);
-  box-shadow: 0 4px 16px rgba(249,115,22,0.35);
+  background: #091c57;
   border: none;
   cursor: pointer;
   color: #fff;
@@ -233,16 +230,15 @@ body {
   gap: 7px;
   font-size: 0.875rem;
   font-weight: 700;
-  font-family: Arial, sans-serif;
   text-decoration: none;
   position: relative;
   transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   white-space: nowrap;
 }
 .header__cart:hover {
-  background: linear-gradient(135deg, #c75c00 0%, #ea6c00 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(249,115,22,0.5);
+  background: #0d2575;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(9,28,87,0.35);
   color: #fff;
 }
 .header__cart-label {
