@@ -2586,3 +2586,44 @@ body {
   .btn--enquiry { display: none; }
   .header__burger { display: flex; }
 }
+
+/* ======================================
+   HERO TEXTURE — APPLIED TO ALL SECTIONS
+   ====================================== */
+
+.products,
+.home-gallery,
+.showcase,
+.logos,
+.footer-brands,
+.cta-section,
+.features-section {
+  background:
+    radial-gradient(ellipse 75% 80% at 85% 45%, rgba(59,130,246,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 55% 55% at 5%  85%, rgba(99,102,241,0.06) 0%, transparent 55%),
+    linear-gradient(155deg, #f4f7ff 0%, #ffffff 40%, #eef4ff 100%) !important;
+  position: relative;
+}
+
+.products::before,
+.home-gallery::before,
+.showcase::before,
+.logos::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(59,130,246,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59,130,246,0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.products__inner,
+.home-gallery__inner,
+.showcase__stage,
+.logos__inner {
+  position: relative;
+  z-index: 1;
+}
