@@ -317,17 +317,17 @@ body {
 }
 
 .btn--hero {
-  background-color: #2563eb;
+  background-color: #091c57;
   color: #ffffff;
   padding: 13px 28px;
   font-size: 15px;
-  border-color: #2563eb;
+  border-color: #091c57;
   margin-top: 8px;
 }
 .btn--hero:hover {
-  background-color: #1d4ed8;
-  border-color: #1d4ed8;
-  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.35);
+  background-color: #0d2575;
+  border-color: #0d2575;
+  box-shadow: 0 4px 16px rgba(9, 28, 87, 0.35);
 }
 
 /* ======================================
