@@ -1684,24 +1684,27 @@ body {
 .home-gallery__label {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  padding: 28px 20px 18px;
-  background: linear-gradient(to top, rgba(6,15,46,0.82) 0%, transparent 100%);
+  padding: 48px 20px 20px;
+  background: linear-gradient(to top, rgba(6,15,46,0.95) 0%, rgba(6,15,46,0.5) 50%, transparent 100%);
   color: #ffffff;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.01em;
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.5);
 }
 .home-gallery__slot:not(:has(img)) .home-gallery__label {
   position: absolute;
   bottom: 50%; left: 50%;
   transform: translate(-50%, 50%);
   background: none;
-  color: #7b8fc7;
-  font-size: 14px;
-  font-weight: 600;
+  color: #4a5fa3;
+  font-size: 15px;
+  font-weight: 700;
   padding: 0;
   text-align: center;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.04em;
+  text-shadow: none;
+  white-space: nowrap;
 }
 
 @media (max-width: 960px) {
