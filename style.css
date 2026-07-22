@@ -1702,20 +1702,19 @@ body {
 
 .home-gallery__label {
   position: absolute;
-  bottom: 14px;
-  left: 14px;
-  padding: 7px 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 14px 20px;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: #0d1117;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: 0.03em;
-  border-radius: 20px;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.12);
+  letter-spacing: 0.02em;
   text-shadow: none;
-  white-space: nowrap;
+  border-top: 1px solid rgba(9,28,87,0.08);
 }
 .home-gallery__slot:not(:has(img)) .home-gallery__label {
   position: absolute;
