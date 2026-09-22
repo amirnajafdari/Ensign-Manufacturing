@@ -181,7 +181,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="#16a34a" stroke-width="2.5">
             <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
           </svg>
-          Message sent! We'll be in touch soon.
+          Opening your email app — hit send to complete your enquiry.
         </div>
       </form>
 
@@ -222,7 +222,27 @@
       e.preventDefault();
       const btn = e.target.querySelector('.contact-form__btn');
       btn.disabled = true;
-      btn.textContent = 'Sending…';
+      btn.textContent = 'Opening email…';
+
+      const name    = document.getElementById('cf-name').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const company = document.getElementById('cf-company').value.trim();
+      const subject = document.getElementById('cf-subject').value || 'Website Enquiry';
+      const message = document.getElementById('cf-message').value.trim();
+
+      const bodyLines = [
+        `Name: ${name}`,
+        `Email: ${email}`,
+        company ? `Company: ${company}` : null,
+        '',
+        message
+      ].filter(line => line !== null);
+
+      const mailBody = encodeURIComponent(bodyLines.join('\n'));
+      const mailSubject = encodeURIComponent(`${subject} — from Website Contact Form`);
+
+      window.location.href = `mailto:enquiries@ensignsiteservice.co.uk?subject=${mailSubject}&body=${mailBody}`;
+
       setTimeout(() => {
         document.getElementById('cfSuccess').style.display = 'flex';
         e.target.reset();
