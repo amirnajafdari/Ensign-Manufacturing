@@ -1,3 +1,6 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/valve-type-52", "destination": "/fabricated-diverter-valve", "permanent": true }
+  ]
 }

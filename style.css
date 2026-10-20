@@ -1429,6 +1429,18 @@ body {
 .vprod__pdf-btn:hover svg { stroke: #fff; }
 .vprod__pdf-btn svg { transition: stroke 0.2s; flex-shrink: 0; }
 
+/* Blue variant — "Quote for Custom Sizes" in place of the PDF button */
+.vprod__pdf-btn--quote {
+  border-color: #2563eb;
+  color: #091c57;
+  background: #eff6ff;
+}
+.vprod__pdf-btn--quote:hover {
+  background: #2563eb;
+  border-color: #2563eb;
+  box-shadow: 0 5px 16px rgba(37,99,235,0.3);
+}
+
 .vprod__divider {
   border: none;
   border-top: 1px solid #e5e7eb;
