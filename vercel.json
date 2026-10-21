@@ -2,6 +2,7 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/valve-type-52", "destination": "/fabricated-diverter-valve", "permanent": true },
-    { "source": "/valve-type-56", "destination": "/single-dump-valve", "permanent": true }
+    { "source": "/valve-type-56", "destination": "/single-dump-valve", "permanent": true },
+    { "source": "/valve-type-59", "destination": "/actuator-square-louver-damper", "permanent": true }
   ]
 }
