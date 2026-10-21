@@ -117,6 +117,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.ensignmanufacturing.co.uk/single-dump-valve</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.ensignmanufacturing.co.uk/valve-rack-pinion</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
