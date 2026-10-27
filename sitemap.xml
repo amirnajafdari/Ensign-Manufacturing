@@ -122,6 +122,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.ensignmanufacturing.co.uk/double-dump-valve</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.ensignmanufacturing.co.uk/actuator-square-louver-damper</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
