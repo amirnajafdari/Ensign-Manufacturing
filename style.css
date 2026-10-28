@@ -2700,3 +2700,11 @@ body {
 @media (max-width: 600px) {
   .dquote__row { grid-template-columns: 1fr; }
 }
+/* Highlighted option card — "Installation required" */
+.dquote__check--feature { display: flex; width: 100%; box-sizing: border-box; gap: 14px; padding: 16px 18px; margin: 6px 0 22px; border: 2px solid #bfdbfe; border-radius: 12px; background: #eff6ff; transition: border-color 0.2s, background 0.2s, box-shadow 0.2s; }
+.dquote__check--feature:hover { border-color: #2563eb; box-shadow: 0 4px 14px rgba(37,99,235,0.15); }
+.dquote__check--feature:has(input:checked) { border-color: #2563eb; background: #dbeafe; }
+.dquote__check--feature input { width: 22px; height: 22px; flex-shrink: 0; }
+.dquote__feature-text { display: flex; flex-direction: column; gap: 2px; }
+.dquote__feature-text strong { font-size: 1rem; color: #091c57; }
+.dquote__feature-text small { font-size: 0.82rem; color: #4b5563; }
