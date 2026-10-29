@@ -66,3 +66,37 @@ function addToCart() {
     setTimeout(() => { btn.textContent = orig; btn.style.background = ''; }, 1800);
   }
 }
+// Mobile menu: the burger opens the nav as a drop-down panel; on small
+// screens the "Product" / "Brochures" headings expand their links in place.
+(function () {
+  function initMobileNav() {
+    const header = document.querySelector('.header');
+    const burger = document.querySelector('.header__burger');
+    if (!header || !burger) return;
+    const isMobile = () => window.matchMedia('(max-width: 900px)').matches;
+
+    burger.setAttribute('aria-expanded', 'false');
+    burger.addEventListener('click', () => {
+      const open = header.classList.toggle('nav-open');
+      burger.setAttribute('aria-expanded', String(open));
+    });
+
+    header.querySelectorAll('.nav__item--has-drop > .nav__link').forEach(link => {
+      link.addEventListener('click', e => {
+        if (!isMobile()) return;
+        e.preventDefault();
+        link.parentElement.classList.toggle('open');
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (!isMobile() && header.classList.contains('nav-open')) {
+        header.classList.remove('nav-open');
+        burger.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initMobileNav);
+  else initMobileNav();
+})();
