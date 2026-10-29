@@ -3,6 +3,7 @@
 
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -10,11 +11,13 @@
   <!-- Location Pages -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/huddersfield</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/cheshire</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -22,38 +25,143 @@
   <!-- Product Category Pages -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/fabricated-valves</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/inspection-doors</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/spill-pallets</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/diesel-tanks</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/sliding-doors</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Valve Products -->
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-leadscrew-circular</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-leadscrew-square</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-manual-circular</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-manual-square</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-rack-pinion</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-butterfly</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-multi-blade</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/valve-square-louver</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/actuator-square-louver-damper</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/fabricated-diverter-valve</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/single-dump-valve</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/double-dump-valve</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/flap-valve</loc>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- Inspection Door Products -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/inspection-door-standard</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/inspection-door-single-bar</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/inspection-door-double-bar</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/inspection-door-bolted</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -61,113 +169,145 @@
   <!-- Spill Pallet Products -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/spill-pallet-932</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/spill-pallet-1245</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/spill-pallet-1252</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/spill-pallet-spillage-decking</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Valve Products -->
+  <!-- Pipe Support Products -->
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-butterfly</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-double-upright-pipe-shoe</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-leadscrew-circular</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-double-upright-with-clamps-gussets</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-leadscrew-square</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-double-upright-with-clamps</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-manual-circular</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-double-upright-with-gussets</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-manual-square</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-fabricated-clamp-shoe-with-gussets</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-multi-blade</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-fabricated-clamp-shoe</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/fabricated-diverter-valve</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-fabricated-pipe-saddle</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/single-dump-valve</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-lock-clamp-shoe</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/double-dump-valve</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-saddle-mount</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/flap-valve</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-split-beam-pipe-shoe</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.ensignmanufacturing.co.uk/diesel-tanks</loc>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-split-beam-with-clamps-gusset</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-split-beam-with-clamps</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-split-beam-with-u-bolts-gussets</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-split-beam-with-u-bolts</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-wall-sleeve-clamp</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.ensignmanufacturing.co.uk/pipe-support-wall-sleeve-flange</loc>
+    <lastmod>2026-10-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Diesel Tank Products -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/diesel-transport-tank-1000l</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/diesel-transport-tank-2000l</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  <url>
-    <loc>https://www.ensignmanufacturing.co.uk/sliding-doors</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+
+  <!-- Sliding Door Products -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/sliding-door</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ensignmanufacturing.co.uk/actuator-square-louver-damper</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-rack-pinion</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.ensignmanufacturing.co.uk/valve-square-louver</loc>
+    <lastmod>2026-10-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -175,17 +315,20 @@
   <!-- Other Pages -->
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/gallery</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/contact</loc>
+    <lastmod>2026-10-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
     <loc>https://www.ensignmanufacturing.co.uk/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
+    <lastmod>2026-10-29</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.3</priority>
   </url>
 
