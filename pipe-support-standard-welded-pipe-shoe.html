@@ -97,6 +97,8 @@
         </div>
         <div class="vprod__thumbs">
           <img src="images/pipe-support/standard-welded-pipe-shoe/1.jpg" alt="Standard Welded Pipe Shoe" class="vprod__thumb active" onclick="setImg(this)" />
+          <img src="images/pipe-support/standard-welded-pipe-shoe/2.jpg" alt="Standard Welded Pipe Shoe – Front View" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/pipe-support/standard-welded-pipe-shoe/3.jpg" alt="Standard Welded Pipe Shoe – Top View" class="vprod__thumb" onclick="setImg(this)" />
         </div>
       </div>
 
@@ -113,9 +115,49 @@
         </ul>
 
         <hr class="vprod__divider" />
-        <div style="margin-top:24px;">
-          <a href="contact" class="btn btn--hero">Request a Quote</a>
+        <!-- Pipe size, quantity and material are passed to the contact form by requestPipeQuote() in cart.js -->
+        <p class="vprod__label">Pipe Size</p>
+        <select id="pipeSize" class="contact-form__input contact-form__select vprod__pipe-size" aria-label="Pipe size">
+          <option value="">Select pipe size</option>
+          <option>1/2&quot;</option>
+          <option>3/4&quot;</option>
+          <option>1&quot;</option>
+          <option>1 1/4&quot;</option>
+          <option>1 1/2&quot;</option>
+          <option>2&quot;</option>
+          <option>2 1/2&quot;</option>
+          <option>3&quot;</option>
+          <option>4&quot;</option>
+          <option>5&quot;</option>
+          <option>6&quot;</option>
+          <option>8&quot;</option>
+          <option>10&quot;</option>
+          <option>12&quot;</option>
+          <option>14&quot;</option>
+          <option>16&quot;</option>
+          <option>18&quot;</option>
+          <option>20&quot;</option>
+          <option>22&quot;</option>
+          <option>24&quot;</option>
+        </select>
+
+        <p class="vprod__label">Material</p>
+        <div class="vprod__materials" id="bodyMat">
+          <button type="button" class="vprod__mat active" onclick="pickMat(this)"><span>SS316</span><svg class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
+          <button type="button" class="vprod__mat" onclick="pickMat(this)"><span>S275</span><svg style="display:none" class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
+          <button type="button" class="vprod__mat" onclick="pickMat(this)"><span>GLV</span><svg style="display:none" class="vprod__check" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="#2563eb" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg></button>
         </div>
+
+        <div class="vprod__cart-row">
+          <div class="vprod__qty-row">
+            <span class="vprod__qty-label">Qty</span>
+            <button type="button" class="vprod__qty-btn" onclick="document.getElementById('qtyInput').value=Math.max(1,+document.getElementById('qtyInput').value-1)">&#8722;</button>
+            <input id="qtyInput" class="vprod__qty-input" type="number" min="1" value="1" />
+            <button type="button" class="vprod__qty-btn" onclick="document.getElementById('qtyInput').value=+document.getElementById('qtyInput').value+1">+</button>
+          </div>
+          <button type="button" class="vprod__add-btn" onclick="requestPipeQuote()"><svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>Request a Quote</button>
+        </div>
+
       </div>
 
     </div>

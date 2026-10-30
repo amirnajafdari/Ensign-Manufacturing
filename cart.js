@@ -100,3 +100,22 @@ function addToCart() {
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initMobileNav);
   else initMobileNav();
 })();
+
+// Pipe support pages have no prices: the chosen pipe size, material and quantity are
+// sent to the contact form, which fills them into the enquiry.
+function pickMat(btn) {
+  document.querySelectorAll('#bodyMat .vprod__mat').forEach(b => {
+    b.classList.toggle('active', b === btn);
+    b.querySelector('.vprod__check').style.display = b === btn ? 'block' : 'none';
+  });
+}
+
+function requestPipeQuote() {
+  const params = new URLSearchParams({
+    product:  document.querySelector('.vprod__title')?.textContent?.trim() || '',
+    size:     document.getElementById('pipeSize')?.value?.trim() || '',
+    material: document.querySelector('#bodyMat .vprod__mat.active span')?.textContent?.trim() || '',
+    qty:      Math.max(1, parseInt(document.getElementById('qtyInput')?.value || '1') || 1)
+  });
+  location.href = `contact?${params}`;
+}

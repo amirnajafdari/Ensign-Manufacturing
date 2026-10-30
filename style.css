@@ -2799,3 +2799,6 @@ body {
 @media (max-width: 600px) {
   .contact-main { padding: 48px 16px; }
 }
+/* Keep the form clear of the sticky header when scrolled to from a product page */
+.contact-form { scroll-margin-top: 96px; }
+.vprod__pipe-size { display: block; width: 100%; box-sizing: border-box; margin-bottom: 24px; }
