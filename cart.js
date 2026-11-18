@@ -108,6 +108,9 @@ function pickMat(btn) {
     b.classList.toggle('active', b === btn);
     b.querySelector('.vprod__check').style.display = b === btn ? 'block' : 'none';
   });
+  // A material with its own photo (data-img) also switches the gallery to it
+  const thumb = btn.dataset.img && document.querySelector(`.vprod__thumb[src="${btn.dataset.img}"]`);
+  if (thumb && typeof setImg === 'function') setImg(thumb);
 }
 
 function requestPipeQuote() {

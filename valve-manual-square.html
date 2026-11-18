@@ -38,7 +38,7 @@
     "name": "Manual Square Slide Gate Valve",
     "description": "Durable manual square slide gate valve for square duct sections. Supplied to Huddersfield, Cheshire and across the UK.",
     "url": "https://www.ensignmanufacturing.co.uk/valve-manual-square",
-    "image": "https://www.ensignmanufacturing.co.uk/images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg",
+    "image": "https://www.ensignmanufacturing.co.uk/images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-150-isometric.jpg",
     "brand": { "@type": "Brand", "name": "Ensign Manufacturing" },
     "offers": { "@type": "Offer", "availability": "https://schema.org/InStock", "url": "https://www.ensignmanufacturing.co.uk/valve-manual-square", "seller": { "@type": "Organization", "name": "Ensign Manufacturing" } }
   }
@@ -93,15 +93,16 @@
 
       <div class="vprod__gallery">
         <div class="vprod__main-img-wrap">
-          <img id="vprodMainImg" src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide Gate" class="vprod__main-img" />
+          <img id="vprodMainImg" src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-150-isometric.jpg" alt="Manual Square Slide Gate" class="vprod__main-img" />
         </div>
         <div class="vprod__thumbs">
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-01.jpg" alt="Manual Square Slide Gate Valve" class="vprod__thumb active" onclick="setImg(this)" />
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-02.jpg" alt="Manual Square Slide Gate Valve" class="vprod__thumb" onclick="setImg(this)" />
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MANUAL%20SQUARE%20SLIDE-03.jpg" alt="Manual Square Slide Gate Valve" class="vprod__thumb" onclick="setImg(this)" />
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MSS%20Drawing%2001.JPG" alt="Manual Square Slide Gate Valve" class="vprod__thumb" onclick="setImg(this)" />
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MSS%20Drawing%2002.JPG" alt="Manual Square Slide Gate Valve" class="vprod__thumb" onclick="setImg(this)" />
-          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/MSS%20Drawing%2003.JPG" alt="Manual Square Slide Gate Valve" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-150-isometric.jpg" alt="Manual Square Slide Gate 150 – Isometric View" class="vprod__thumb active" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-200-250-isometric.jpg" alt="Manual Square Slide Gate 200-250 – Isometric View" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-300-isometric.jpg" alt="Manual Square Slide Gate 300 – Isometric View" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-150-front.jpg" alt="Manual Square Slide Gate 150 – Front View" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-200-250-front.jpg" alt="Manual Square Slide Gate 200-250 – Front View" class="vprod__thumb" onclick="setImg(this)" />
+          <img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-300-front.jpg" alt="Manual Square Slide Gate 300 – Front View" class="vprod__thumb" onclick="setImg(this)" />
+          <span class="vprod__thumb-drawing"><img src="images/VALVE%20ALBUM/FABRICATED%20SLIDE%20GATE/MANUAL%20SQUARE%20SLIDE/manual-square-slide-gate-150-2d-drawing.jpg" alt="Manual Square Slide Gate 150 – 2D Drawing" class="vprod__thumb" onclick="setImg(this)" /></span>
         </div>
       </div>
 
@@ -223,7 +224,9 @@
       '300': ['390','300','45','3','5','500','160','540','M12']
     };
     function setImg(t){document.getElementById('vprodMainImg').src=t.src;document.querySelectorAll('.vprod__thumb').forEach(x=>x.classList.remove('active'));t.classList.add('active');}
-    function setVariant(b){document.querySelectorAll('.vprod__variant').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=variantData[b.dataset.size];if(d){const c=document.querySelectorAll('#vprodPropsBody td');c.forEach((td,i)=>td.textContent=d[i]);}}
+    // Isometric photo shown for each size (200 and 250 share one photo)
+    const variantImg = { '150': '150-isometric', '200': '200-250-isometric', '250': '200-250-isometric', '300': '300-isometric' };
+    function setVariant(b){document.querySelectorAll('.vprod__variant').forEach(x=>x.classList.remove('active'));b.classList.add('active');const d=variantData[b.dataset.size];if(d){const c=document.querySelectorAll('#vprodPropsBody td');c.forEach((td,i)=>td.textContent=d[i]);}const thumb=document.querySelector(`.vprod__thumb[src$="manual-square-slide-gate-${variantImg[b.dataset.size]}.jpg"]`);if(thumb)setImg(thumb);}
     function setMat(g,b){const gr=document.getElementById(g);gr.querySelectorAll('.vprod__mat').forEach(x=>{x.classList.remove('active');const c=x.querySelector('.vprod__check');if(c)c.style.display='none';});b.classList.add('active');const c=b.querySelector('.vprod__check');if(c)c.style.display='block';}
     document.querySelectorAll('.vprod__mat:not(.active) .vprod__check').forEach(el=>el.style.display='none');
     const suggTrack = document.getElementById('suggTrack');
