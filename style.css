@@ -3129,3 +3129,9 @@ a:hover .hp-btn--red { background: #c21414; }
 @media (max-width: 1200px) and (min-width: 901px) { .sh__nav-list { gap: 0 16px; } .sh__link { font-size: 14px; } .sh__logo img { height: 60px; } }
 @media (max-width: 600px) { .hp-rail__track, .hp-rail--in .hp-rail__track { grid-auto-columns: calc(100% / 1.6); } }
 @media (max-width: 600px) { .hp-banner--dark .hp-banner__img { opacity: .85; } }
+/* Location pages: plain even grid of six category cards */
+.products__grid--even { grid-template-rows: none; }
+.products__grid--even .product-card:nth-child(n) { grid-column: auto; grid-row: auto; }
+.products__grid--even .product-card:nth-child(n) .product-card__img-wrap { height: 260px; min-height: 0; }
+.products__grid--even .product-card__img { max-height: 100%; object-fit: contain; }
+@media (max-width: 900px) { .products__grid--even { grid-template-columns: 1fr 1fr; gap: 16px; } .products__grid--even .product-card:nth-child(n) .product-card__img-wrap { height: 180px; } }

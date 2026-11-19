@@ -229,3 +229,16 @@ function requestPipeQuote() {
   });
   location.href = `contact?${params}`;
 }
+
+// "Related products" rows on product pages: the arrows scroll the row by about one card set
+(function () {
+  function initSugg() {
+    const track = document.getElementById('suggTrack');
+    if (!track) return;
+    const step = () => Math.max(240, track.clientWidth * 0.8);
+    document.getElementById('suggPrev')?.addEventListener('click', () => track.scrollBy({ left: -step(), behavior: 'smooth' }));
+    document.getElementById('suggNext')?.addEventListener('click', () => track.scrollBy({ left: step(), behavior: 'smooth' }));
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initSugg);
+  else initSugg();
+})();
