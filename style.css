@@ -3153,3 +3153,36 @@ a:hover .hp-btn--red { background: #c21414; }
   .crumbs__list { padding: 10px 16px; font-size: 13px; }
   .crumbs__list li + li::before { margin: 0 9px 0 7px; }
 }
+
+/* ======================================
+   INDUSTRY SUMMARY (bottom of product & category pages)
+   ====================================== */
+.seo-info { background: #ffffff; border-top: 1px solid #e8ebf0; padding: 56px 0 64px; }
+.seo-info__inner { max-width: 1200px; margin: 0 auto; padding: 0 32px; }
+.seo-info__title { font-size: 26px; font-weight: 700; color: #091c57; letter-spacing: -0.01em; margin-bottom: 24px; }
+.seo-info__grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(0, 1fr); gap: 48px; align-items: start; }
+.seo-info__main p { color: #4b5563; font-size: 16px; line-height: 1.85; margin-bottom: 16px; }
+.seo-info__main a { color: #2563eb; }
+.seo-info__side { background: #f6f8fb; border: 1px solid #e8ebf0; border-radius: 12px; padding: 24px; }
+.seo-info__sub { font-size: 14px; font-weight: 700; color: #091c57; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 12px; }
+.seo-info__side .seo-info__sub + * { margin-bottom: 24px; }
+.seo-info__list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.seo-info__list li { position: relative; padding-left: 22px; color: #374151; font-size: 15px; line-height: 1.5; }
+.seo-info__list li::before { content: ""; position: absolute; left: 2px; top: 6px; width: 10px; height: 5px; border-left: 2px solid #2563eb; border-bottom: 2px solid #2563eb; transform: rotate(-45deg); }
+.seo-info__tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 0 !important; }
+.seo-info__tags span { background: #fff; border: 1px solid #dbe2ee; border-radius: 999px; padding: 5px 12px; font-size: 13px; color: #374151; }
+.seo-info__faq { margin-top: 40px; }
+.seo-info__q { border-bottom: 1px solid #e8ebf0; }
+.seo-info__q summary { cursor: pointer; list-style: none; padding: 16px 32px 16px 0; position: relative; font-weight: 600; color: #111827; font-size: 16px; }
+.seo-info__q summary::-webkit-details-marker { display: none; }
+.seo-info__q summary::after { content: "+"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font-size: 22px; font-weight: 400; color: #2563eb; }
+.seo-info__q[open] summary::after { content: "\2212"; }
+.seo-info__q p { color: #4b5563; font-size: 15px; line-height: 1.8; padding: 0 0 18px; }
+@media (max-width: 900px) {
+  .seo-info__grid { grid-template-columns: 1fr; gap: 28px; }
+}
+@media (max-width: 600px) {
+  .seo-info { padding: 40px 0 48px; }
+  .seo-info__inner { padding: 0 16px; }
+  .seo-info__title { font-size: 22px; }
+}
