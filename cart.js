@@ -100,6 +100,8 @@ const SITE_PRODUCTS = [
   ['Wall Sleeve Clamp', 'pipe-support-wall-sleeve-clamp', 'Pipe Supports'],
   ['Wall Sleeve Flange', 'pipe-support-wall-sleeve-flange', 'Pipe Supports'],
   ...[15, 20, 25, 32, 40, 50, 65, 80, 100, 125, 150, 200, 250, 300].map(n => [`Pipe Clips NB ${n}`, `pipe-clip-nb${n}`, 'Pipe Clips']),
+  ...[['1/2', '1-2'], ['3/4', '3-4'], ['1', '1'], ['1-1/4', '1-1-4'], ['1-1/2', '1-1-2'], ['2', '2'], ['2-1/2', '2-1-2'], ['3', '3'], ['4', '4'], ['5', '5'], ['6', '6'], ['8', '8'], ['10', '10'], ['12', '12'], ['14', '14']]
+    .map(([l, s]) => [`Clevis Hanger ${l}"`, `clevis-hanger-${s}-inch`, 'Clevis Hanger']),
   ['Standard Inspection Door', 'inspection-door-standard', 'Inspection Doors'],
   ['Single Bar Inspection Door', 'inspection-door-single-bar', 'Inspection Doors'],
   ['Double Bar Inspection Door', 'inspection-door-double-bar', 'Inspection Doors'],
@@ -115,6 +117,7 @@ const SITE_PRODUCTS = [
   ['Pipe Support', 'pipe-support', 'Category'],
   ['Pipe Supports', 'pipe-supports', 'Category'],
   ['Pipe Clips', 'pipe-clips', 'Category'],
+  ['Clevis Hanger', 'clevis-hanger', 'Category'],
   ['Inspection Doors', 'inspection-doors', 'Category'],
   ['Spill Pallets', 'spill-pallets', 'Category'],
   ['Diesel Tanks', 'diesel-tanks', 'Category'],

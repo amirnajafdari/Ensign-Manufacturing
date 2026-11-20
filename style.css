@@ -3135,3 +3135,4 @@ a:hover .hp-btn--red { background: #c21414; }
 .products__grid--even .product-card:nth-child(n) .product-card__img-wrap { height: 260px; min-height: 0; }
 .products__grid--even .product-card__img { max-height: 100%; object-fit: contain; }
 @media (max-width: 900px) { .products__grid--even { grid-template-columns: 1fr 1fr; gap: 16px; } .products__grid--even .product-card:nth-child(n) .product-card__img-wrap { height: 180px; } }
+.vprod__props--nowrap td { white-space: nowrap; }
