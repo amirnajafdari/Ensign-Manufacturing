@@ -3136,3 +3136,20 @@ a:hover .hp-btn--red { background: #c21414; }
 .products__grid--even .product-card__img { max-height: 100%; object-fit: contain; }
 @media (max-width: 900px) { .products__grid--even { grid-template-columns: 1fr 1fr; gap: 16px; } .products__grid--even .product-card:nth-child(n) .product-card__img-wrap { height: 180px; } }
 .vprod__props--nowrap td { white-space: nowrap; }
+
+/* ======================================
+   BREADCRUMB (Home > Category > Product)
+   ====================================== */
+.crumbs { background: #f3f5f7; border-bottom: 1px solid #e8ebf0; }
+.crumbs__list { list-style: none; max-width: 1280px; margin: 0 auto; padding: 14px 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 4px 0; font-size: 14px; color: #6b7280; }
+.crumbs--product .crumbs__list { max-width: 1200px; }
+.crumbs__list li { display: inline-flex; align-items: center; }
+.crumbs__list li + li::before { content: ""; width: 6px; height: 6px; margin: 0 12px 0 10px; border-right: 1.5px solid #9ca3af; border-top: 1.5px solid #9ca3af; transform: rotate(45deg); }
+.crumbs__list a { color: #6b7280; text-decoration: none; }
+.crumbs__list a:hover { color: #2563eb; text-decoration: underline; }
+.crumbs__list [aria-current="page"] { color: #374151; }
+.crumbs--product + .vprod { padding-top: 32px; }
+@media (max-width: 600px) {
+  .crumbs__list { padding: 10px 16px; font-size: 13px; }
+  .crumbs__list li + li::before { margin: 0 9px 0 7px; }
+}
